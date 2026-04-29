@@ -1,0 +1,12 @@
+README.md
+install.sh
+
+.config/mole/*
+!.config/mole/whitelist
+
+.config/nvim/lazy-lock.json
+
+.config/zsh/.zcompcache
+.config/zsh/local.zsh
+.config/zsh/zcompdump
+.config/zsh/zcompdump.zwc

@@ -1,0 +1,67 @@
+# GENERAL
+add_newline = true
+command_timeout = 1000
+
+# ORDER
+format = """
+$directory\
+$git_branch\
+$git_status\
+$docker_context\
+$package\
+$nodejs\
+$python\
+$custom\
+$fill\
+$cmd_duration $jobs $status $container\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❌](bold red)"
+
+# Node.js (JS/TS)
+[nodejs]
+symbol = ""
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+
+# Python
+[python]
+symbol = "🐍"
+style = "bold blue"
+format = "via [$symbol($version )(($virtualenv) )]($style)"
+pyenv_prefix = "venv "
+
+# Docker
+[docker_context]
+symbol = " "
+style = "bold blue"
+format = "on [$symbol$context]($style) "
+
+# Package version
+[package]
+symbol = "📦"
+style = "bold 208"
+format = "is [$symbol$version]($style) "
+
+# Git
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[cmd_duration]
+min_time = 2_000
+format = "took [   $duration](bold yellow) "

@@ -1,0 +1,114 @@
+# dotfiles
+
+Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](https://www.chezmoi.io/).
+
+## Stack
+
+| Category         | Tools                                                      |
+| ---------------- | ---------------------------------------------------------- |
+| System           | chezmoi, mole, syncthing                                   |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, zoxide, fzf, atuin) |
+| CLI Essentials   | bat, eza, fd, ripgrep, dust, procs, bottom, tlrc           |
+| Editor / IDE     | Neovim (AstroNvim), Zed                                    |
+| Dev Tools        | mise, uv, gh, just, task, OrbStack                         |
+| TUI              | code2prompt, lazygit, sqlit-tui                            |
+| GUI Apps         | Arc, Chrome, Obsidian, Figma, IINA, Raycast                |
+| AI               | Claude Code, Claude Desktop, ChatGPT, Perplexity           |
+| Utils            | Bitwarden (GUI/CLI), Stats, Command-X, KeyClu, FFmpeg      |
+
+## Structure
+
+```bash
+~/.config/atuin/config.toml      # shell history
+~/.config/brew/Brewfile          # homebrew packages
+~/.config/ghostty/config         # ghostty terminal
+~/.config/mise/mise.toml         # runtime versions
+~/.config/mole/whitelist         # mole cleaner whitelist
+~/.config/nvim/                  # neovim (AstroNvim)
+~/.config/sheldon/plugins.toml   # sheldon plugin definitions
+~/.config/starship/starship.toml # prompt
+~/.config/tmux/tmux.conf         # tmux
+~/.config/zsh/
+├── .zshrc                       # entry point
+├── .zprofile                    # brew shellenv
+├── local.zsh                    # secrets (not tracked)
+└── conf.d/
+    ├── aliases.zsh              # all aliases
+    ├── env.zsh                  # exports
+    ├── functions.zsh            # shell functions
+    ├── inits.zsh                # tool inits and completions
+    ├── keybindings.zsh          # keybindings
+    ├── options.zsh              # setopt, history
+    └── plugins.zsh              # compinit + sheldon
+~/.gitconfig                     # git
+~/.zshenv                        # ZDOTDIR
+```
+
+## Install
+
+On a clean machine, run a single command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | bash
+```
+
+> **Note:** If Xcode CLI Tools are not installed, the script will prompt you to install them and exit. Re-run the command after installation completes.
+
+`install.sh` sequentially:
+
+1. Checks Xcode CLI Tools
+2. Installs Homebrew
+3. Installs chezmoi
+4. Clones this repo and applies dotfiles
+5. Creates runtime directories
+6. Installs packages from Brewfile
+7. Installs mise tools
+8. Locks sheldon plugins
+
+## Post-install
+
+```bash
+# Bitwarden
+bw login
+
+# Neovim plugins
+nvim
+# :AstroUpdate — update AstroNvim framework + Lazy plugins + Mason tools
+
+# Fill with your API keys
+# Recommended: store API keys in Bitwarden and export them as env vars
+nvim ~/.config/zsh/local.zsh
+```
+
+## Usage
+
+```bash
+# Config shortcuts
+brewfile     # cat Brewfile
+misefile     # cat mise.toml
+configs      # open chezmoi source in nvim + apply
+
+# General
+up           # brew update + upgrade + bundle (includes mas apps) + mise upgrade
+gc           # brew clean + mole clean + mise prune + docker prune
+brewed       # dump current state to Brewfile
+status       # brew bundle check + chezmoi diff
+```
+
+## Secrets
+
+```bash
+bwu              # unlock bitwarden + load env vars from local.zsh
+bwg "key-name"   # get password by name
+bwl "api"        # search items by name
+```
+
+## Updating dotfiles
+
+```bash
+chezmoi edit file     # edit and auto-apply
+chezmoi add file      # track a new file
+chezmoi diff          # preview pending changes
+chezmoi apply         # apply all changes
+chezmoi update        # pull from GitHub + apply
+```

@@ -1,0 +1,18 @@
+{{- $name := promptString "Your GitHub name" -}}
+{{- $email := promptString "Your GitHub email" -}}
+{{- $signingkey := promptString "Path to SSH public key (ex. ~/.ssh/id_ed25519.pub)" -}}
+{{- $allowedSignersFile := promptString "Path to SSH allowed signers file (ex. ~/.ssh/allowed_signers)" -}}
+
+[data]
+  name = {{ $name | quote }}
+  email = {{ $email | quote }}
+  signingkey = {{ $signingkey | quote }}
+  allowedSignersFile = {{ $allowedSignersFile | quote }}
+
+[git]
+  autoCommit = false
+  autoPush = false
+
+[edit]
+  command = "nvim"
+  apply = true

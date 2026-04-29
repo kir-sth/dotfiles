@@ -1,0 +1,47 @@
+# This is Git's per-user configuration file.
+[user]
+  name = {{ .name }}
+  email = {{ .email }}
+  signingkey = {{ .signingkey }}
+
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+  pager = bat --paging=auto -p
+  autocrlf = false
+  safecrlf = true
+
+[diff]
+  tool = nvimdiff
+
+[merge]
+  tool = nvimdiff
+
+[mergetool]
+  keepBackup = false
+
+[mergetool "nvimdiff"]
+  cmd = nvim -d "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+
+[pull]
+  rebase = true
+
+[fetch]
+  prune = true
+
+[push]
+  autoSetupRemote = true
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  allowedSignersFile = {{ .allowedSignersFile }}
+
+[commit]
+  gpgsign = true
+
+[tag]
+  gpgsign = true

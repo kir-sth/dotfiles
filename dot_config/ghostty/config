@@ -1,0 +1,30 @@
+theme = vercel
+
+auto-update = download
+auto-update-channel = stable
+
+background-opacity = 0.70
+background-blur-radius = 20
+
+cursor-style = block
+cursor-style-blink = false
+
+font-family = "JetBrainsMono Nerd Font"
+font-feature = ["calt", "liga", "dlig"]
+font-size = 14
+
+quick-terminal-animation-duration = 0.1
+quick-terminal-autohide = true
+quick-terminal-position = top
+quick-terminal-space-behavior = remain
+
+keybind = global:opt+space=toggle_quick_terminal
+
+macos-auto-secure-input = true
+macos-hidden = always
+macos-option-as-alt = left
+macos-shortcuts = allow
+
+shell-integration = zsh
+shell-integration-features = no-cursor
+
