@@ -4,9 +4,8 @@ pnpm = "latest"
 python = "latest"
 rust = "latest"
 "pipx:sqlit-tui" = { version = "latest", extras = "ssh" }
-"cargo:spider_cli" = { version = "latest", features = "smart" }
 "cargo:pdf_oxide_cli" = { version = "latest" }
-"cargo:pdf_oxide_mcp" = { version = "latest" }
+"github:charmbracelet/freeze" = { version = "latest" }
 
 [env]
 _ = { path = "[./bin]" }
@@ -16,9 +15,5 @@ npm = { package_manager = "pnpm" }
 pipx = { uvx = true }
 experimental = true
 status = { show_tools = true }
-
-[settings.node]
-gpg_verify = false
-
-[settings.cargo]
-binstall = true
+node = { gpg_verify = false }
+cargo = { binstall = true }

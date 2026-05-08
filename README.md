@@ -4,23 +4,25 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                                      |
-| ---------------- | ---------------------------------------------------------- |
-| System           | chezmoi, mole, syncthing                                   |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, zoxide, fzf, atuin) |
-| CLI Essentials   | bat, eza, fd, ripgrep, dust, procs, bottom, tlrc           |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                    |
-| Dev Tools        | mise, uv, gh, just, task, OrbStack                         |
-| TUI              | code2prompt, lazygit, sqlit-tui                            |
-| GUI Apps         | Arc, Chrome, Obsidian, Figma, IINA, Raycast                |
-| AI               | Claude Code, Claude Desktop, ChatGPT, Perplexity           |
-| Utils            | Bitwarden (GUI/CLI), Stats, Command-X, KeyClu, FFmpeg      |
+| Category         | Tools                                                |
+| ---------------- | ---------------------------------------------------- |
+| System           | chezmoi, mole, syncthing, OrbStack                   |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)   |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep                        |
+| CLI Extras       | dust, procs, bottom, tlrc, freeze, FFmpeg, pdf-oxide |
+| Editor / IDE     | Neovim (AstroNvim), Zed                              |
+| Dev Tools        | mise, uv, gh, just, task                             |
+| Dev TUI          | Claude Code, code2prompt, lazygit, sqlit-tui         |
+| GUI Apps         | Arc, Chrome, Obsidian, Figma, IINA, Raycast          |
+| AI               | Claude Desktop, ChatGPT, Perplexity                  |
+| Utils            | Bitwarden (GUI/CLI), Stats, Command-X, KeyClu        |
 
 ## Structure
 
 ```bash
 ~/.config/atuin/config.toml      # shell history
 ~/.config/brew/Brewfile          # homebrew packages
+~/.config/freeze/user.json       # Code screenshot tool
 ~/.config/ghostty/config         # ghostty terminal
 ~/.config/mise/mise.toml         # runtime versions
 ~/.config/mole/whitelist         # mole cleaner whitelist
