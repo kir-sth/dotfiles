@@ -1,19 +1,18 @@
 [tools]
-node = "latest"
-pnpm = "latest"
+bun = "latest"
 python = "latest"
+uv = "latest"
 rust = "latest"
-"pipx:sqlit-tui" = { version = "latest", extras = "ssh" }
-"cargo:pdf_oxide_cli" = { version = "latest" }
-"github:charmbracelet/freeze" = { version = "latest" }
+cargo-binstall = "latest"
 
-[env]
-_ = { path = "[./bin]" }
+"github:charmbracelet/freeze" = { version = "latest" }
+"pipx:sqlit-tui" = { version = "latest", extras = ["ssh"] }
+"pipx:ghgrab" = { version = "latest" }
 
 [settings]
-npm = { package_manager = "pnpm" }
-pipx = { uvx = true }
+cargo.binstall = true
 experimental = true
-status = { show_tools = true }
-node = { gpg_verify = false }
-cargo = { binstall = true }
+npm.package_manager = "bun"
+pipx.uvx = true
+python.uv_venv_auto = "source"
+status.show_tools = true

@@ -25,7 +25,6 @@ brew "starship"
 brew "syncthing", restart_service: :changed
 brew "tlrc"
 brew "tmux"
-brew "uv"
 brew "zoxide"
 cask "amneziavpn"
 cask "arc"

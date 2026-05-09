@@ -9,12 +9,12 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | System           | chezmoi, mole, syncthing, OrbStack                   |
 | Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)   |
 | CLI Essentials   | zoxide, bat, eza, fd, ripgrep                        |
-| CLI Extras       | dust, procs, bottom, tlrc, freeze, FFmpeg, pdf-oxide |
+| CLI Extras       | dust, procs, bottom, tlrc, freeze, ffmpeg            |
 | Editor / IDE     | Neovim (AstroNvim), Zed                              |
-| Dev Tools        | mise, uv, gh, just, task                             |
-| Dev TUI          | Claude Code, code2prompt, lazygit, sqlit-tui         |
+| Dev Tools        | mise, uv, bun, cargo, gh, just, task                 |
+| Dev TUI          | Claude Code, code2prompt, lazygit, sqlit-tui, ghgrab |
 | GUI Apps         | Arc, Chrome, Obsidian, Figma, IINA, Raycast          |
-| AI               | Claude Desktop, ChatGPT, Perplexity                  |
+| AI GUI           | Claude Desktop, ChatGPT, Perplexity                  |
 | Utils            | Bitwarden (GUI/CLI), Stats, Command-X, KeyClu        |
 
 ## Structure
