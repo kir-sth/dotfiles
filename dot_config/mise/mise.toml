@@ -6,8 +6,8 @@ rust = "latest"
 cargo-binstall = "latest"
 
 "github:charmbracelet/freeze" = { version = "latest" }
+"github:abhixdd/ghgrab" = { version = "latest" }
 "pipx:sqlit-tui" = { version = "latest", extras = ["ssh"] }
-"pipx:ghgrab" = { version = "latest" }
 
 [settings]
 cargo.binstall = true
