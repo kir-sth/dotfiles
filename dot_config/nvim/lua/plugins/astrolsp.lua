@@ -20,16 +20,6 @@ return {
       },
       timeout_ms = 1000,
     },
-    autocmds = {
-      lsp_codelens_refresh = {
-        cond = "textDocument/codeLens",
-        {
-          event = { "InsertLeave", "BufEnter" },
-          desc = "Refresh codelens (buffer)",
-          callback = function(args) vim.lsp.codelens.refresh { bufnr = args.buf } end,
-        },
-      },
-    },
     mappings = {
       n = {
         gD = {

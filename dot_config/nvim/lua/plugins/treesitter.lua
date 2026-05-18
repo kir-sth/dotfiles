@@ -10,10 +10,6 @@ return {
       -- Languages without packs
       "sql", -- pack.sql skipped
 
-      -- Markup / Docs (pack.markdown skipped)
-      "markdown",
-      "markdown_inline",
-
       -- Config
       "ssh_config",
 

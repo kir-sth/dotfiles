@@ -35,6 +35,7 @@ return {
         css = { "biome" },
         sql = { "sqruff" },
         toml = { "tombi" },
+        markdown = { "mdformat" },
       },
       format_on_save = {
         timeout_ms = 3000,
@@ -52,6 +53,7 @@ return {
         javascriptreact = { "biomejs" },
         typescriptreact = { "biomejs" },
         sql = { "sqruff" },
+        markdown = { "markdownlint-cli2" },
       }
       vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
         group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),

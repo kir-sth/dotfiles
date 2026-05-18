@@ -14,6 +14,9 @@ return {
   { import = "astrocommunity.pack.json" }, -- jsonls, json/jsonc parsers
   { import = "astrocommunity.pack.yaml" }, -- yaml-language-server, yaml parser
 
+  -- Markup / Docs
+  { import = "astrocommunity.pack.markdown" }, -- markdown-oxide, markdown parsers
+
   -- Infra / DevOps
   { import = "astrocommunity.pack.docker" }, -- dockerls, docker-compose-ls, hadolint, dockerfile parser
   { import = "astrocommunity.pack.terraform" }, -- terraform-ls, tflint, terraform/hcl parsers
@@ -28,6 +31,5 @@ return {
   { import = "astrocommunity.pack.just" }, -- just parser + just-lsp
 
   -- pack.sql         skipped
-  -- pack.markdown    skipped
   -- pack.toml        skipped
 }
