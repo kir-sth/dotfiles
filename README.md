@@ -8,8 +8,8 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | ---------------- | -------------------------------------------------- |
 | System           | chezmoi, mole, syncthing, OrbStack                 |
 | Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin) |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep                      |
-| CLI Extras       | dust, procs, bottom, tlrc, freeze, ffmpeg          |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                |
+| CLI Extras       | dust, procs, bottom, tlrc, freeze, glow, ffmpeg    |
 | Editor / IDE     | Neovim (AstroNvim), Zed                            |
 | Dev Tools        | mise, uv, bun, cargo, gh, just, task               |
 | Dev TUI          | code2prompt, lazygit, sqlit-tui, ghgrab            |

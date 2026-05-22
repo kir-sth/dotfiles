@@ -26,34 +26,52 @@ export ZSH_COMPDUMP="$XDG_CONFIG_HOME/zsh/zcompdump"
 # XDG
 export IPYTHONDIR="$XDG_DATA_HOME/ipython"
 export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
+export BUN_INSTALL="$XDG_DATA_HOME/mise/bun"
 export CARGO_HOME="$XDG_DATA_HOME/mise/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/mise/rustup"
-export BUN_INSTALL="$XDG_DATA_HOME/mise/bun"
 export SHELDON_DATA_DIR="$XDG_DATA_HOME/sheldon"
 
 # XDG STATE
+export FZF_HISTORY_FILE="$XDG_STATE_HOME/fzf/history"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
-export FZF_HISTORY_FILE="$XDG_STATE_HOME/fzf/history"
 
 # XDG CACHE
 export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
 export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
 
-# STYLE
+# EDITOR
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BAT_THEME="base16"
 export LANG=en_US.UTF-8
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-# PLUGINS
+# PAGER
+export PAGER="moor"
+export MANPAGER="moor"
+export MOOR="--statusbar=bold --follow"
+
+# BAT
+export BAT_PAGER="moor"
+export BAT_THEME="Monokai Extended"
+export BAT_STYLE="numbers,changes,header"
+export BAT_PAGING="never"
+
+# FZF
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
+export FZF_CTRL_T_OPTS="--preview '[ -f {} ] && bat --color=always --style=plain --paging=never {}'"
+export FZF_DEFAULT_OPTS="
+--height=40%
+--layout=reverse
+--border=rounded
+--info=inline
+--history=$FZF_HISTORY_FILE
+--preview-window=right:60%:wrap
+"
+
+# ZSH PLUGINS
 export ATUIN_NOBIND="true"
 export YSU_MESSAGE_POSITION="after"
 export YSU_MESSAGE_FORMAT="💡 alias: %alias"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
-export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --color=header:italic --history=$FZF_HISTORY_FILE"
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)

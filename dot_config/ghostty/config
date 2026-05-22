@@ -1,4 +1,4 @@
-theme = vercel
+theme = Monokai Pro
 
 auto-update = download
 auto-update-channel = stable
@@ -27,4 +27,3 @@ macos-shortcuts = allow
 
 shell-integration = zsh
 shell-integration-features = no-cursor
-

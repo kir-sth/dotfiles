@@ -1,7 +1,12 @@
 # SHELDON
 eval "$(sheldon source)"
 
-# COMPLETIONS
+# COMPLETIONS SETTINGS
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# COMPLETIONS INIT
 autoload -Uz compinit
 if [[ -n "$ZSH_COMPDUMP"(#qN.mh+24) ]]; then
   compinit -d "$ZSH_COMPDUMP"
