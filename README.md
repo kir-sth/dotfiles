@@ -23,8 +23,9 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 ```bash
 ~/.config/atuin/config.toml      # shell history
 ~/.config/brew/Brewfile          # homebrew packages
-~/.config/freeze/user.json       # Code screenshot tool
+~/.config/freeze/user.json       # code screenshot tool
 ~/.config/ghostty/config         # ghostty terminal
+~/.config/glow/config            # markdown reader
 ~/.config/mise/mise.toml         # runtime versions
 ~/.config/mole/whitelist         # mole cleaner whitelist
 ~/.config/nvim/                  # neovim (AstroNvim)
