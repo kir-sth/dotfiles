@@ -18,16 +18,17 @@ export XDG_RUNTIME_DIR="${TMPDIR%/}"
 export BREWFILE="$XDG_CONFIG_HOME/brew/Brewfile"
 export CRUSH_GLOBAL_CONFIG="$XDG_CONFIG_HOME/crush"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export SHELDON_CONFIG_DIR="$XDG_CONFIG_HOME/sheldon"
 export SQLIT_CONFIG_DIR="$XDG_CONFIG_HOME/sqlit"
 export ZSH_COMPDUMP="$XDG_CONFIG_HOME/zsh/zcompdump"
 
-# XDG DATA
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
+# XDG
+export IPYTHONDIR="$XDG_DATA_HOME/ipython"
 export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/mise/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/mise/rustup"
+export BUN_INSTALL="$XDG_DATA_HOME/mise/bun"
 export SHELDON_DATA_DIR="$XDG_DATA_HOME/sheldon"
 
 # XDG STATE
@@ -36,7 +37,8 @@ export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 export FZF_HISTORY_FILE="$XDG_STATE_HOME/fzf/history"
 
 # XDG CACHE
-export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
+export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
 
 # STYLE
 export EDITOR="nvim"

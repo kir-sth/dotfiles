@@ -5,7 +5,6 @@ uv = "latest"
 rust = "latest"
 cargo-binstall = "latest"
 
-"github:charmbracelet/freeze" = { version = "latest" }
 "github:abhixdd/ghgrab" = { version = "latest" }
 "pipx:sqlit-tui" = { version = "latest", extras = ["ssh"] }
 
@@ -16,3 +15,4 @@ npm.package_manager = "bun"
 pipx.uvx = true
 python.uv_venv_auto = "source"
 status.show_tools = true
+idiomatic_version_file_enable_tools = ["rust", "python", "bun"]
