@@ -4,18 +4,19 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                                |
-| ---------------- | ---------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, OrbStack                   |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)   |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep                        |
-| CLI Extras       | dust, procs, bottom, tlrc, freeze, ffmpeg            |
-| Editor / IDE     | Neovim (AstroNvim), Zed                              |
-| Dev Tools        | mise, uv, bun, cargo, gh, just, task                 |
-| Dev TUI          | Claude Code, code2prompt, lazygit, sqlit-tui, ghgrab |
-| GUI Apps         | Arc, Chrome, Obsidian, Figma, IINA, Raycast          |
-| AI GUI           | Claude Desktop, ChatGPT, Perplexity                  |
-| Utils            | Bitwarden (GUI/CLI), Stats, Command-X, KeyClu        |
+| Category         | Tools                                              |
+| ---------------- | -------------------------------------------------- |
+| System           | chezmoi, mole, syncthing, OrbStack                 |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin) |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep                      |
+| CLI Extras       | dust, procs, bottom, tlrc, freeze, ffmpeg          |
+| Editor / IDE     | Neovim (AstroNvim), Zed                            |
+| Dev Tools        | mise, uv, bun, cargo, gh, just, task               |
+| Dev TUI          | code2prompt, lazygit, sqlit-tui, ghgrab            |
+| AI TUI           | Claude Code, Crush                                 |
+| AI GUI           | Claude Desktop, ChatGPT, Perplexity                |
+| GUI Apps         | Arc, Chrome, Obsidian, Figma, IINA, Raycast        |
+| Utils            | Bitwarden (GUI/CLI), Stats, Command-X, KeyClu      |
 
 ## Structure
 

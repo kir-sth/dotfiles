@@ -1,3 +1,4 @@
+tap "charmbracelet/tap"
 brew "atuin"
 brew "bat"
 brew "bitwarden-cli"
@@ -26,6 +27,7 @@ brew "syncthing", restart_service: :changed
 brew "tlrc"
 brew "tmux"
 brew "zoxide"
+brew "charmbracelet/tap/crush"
 cask "amneziavpn"
 cask "arc"
 cask "bitwarden"
