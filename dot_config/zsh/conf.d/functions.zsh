@@ -20,7 +20,6 @@ _gc() {
   mole clean
   mole purge
   mise prune
-  docker system prune -f
 }
 
 _status() {
