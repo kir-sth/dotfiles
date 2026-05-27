@@ -16,7 +16,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | AI TUI           | Claude Code, Crush                                 |
 | AI GUI           | Claude Desktop, ChatGPT, Perplexity                |
 | GUI Apps         | Arc, Ferrite, Figma, IINA, Raycast                 |
-| Utils            | Bitwarden (GUI/CLI), Stats                         |
+| Utils            | rwb, Bitwarden, Stats                              |
 
 ## Structure
 
@@ -73,7 +73,8 @@ curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | 
 
 ```bash
 # Bitwarden
-bw login
+rbw config set email <your-email>
+rbw register
 
 # Neovim plugins
 nvim
@@ -97,14 +98,7 @@ up           # brew update + upgrade + bundle (includes mas apps) + mise upgrade
 gc           # brew clean + mole clean + mise prune + docker prune
 brewed       # dump current state to Brewfile
 status       # brew bundle check + chezmoi diff
-```
-
-## Secrets
-
-```bash
-bwu              # unlock bitwarden + load env vars from local.zsh
-bwg "key-name"   # get password by name
-bwl "api"        # search items by name
+setup        # unlock bitwarden + load env vars from local.zsh
 ```
 
 ## Updating dotfiles

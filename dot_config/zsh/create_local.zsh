@@ -1,3 +1,4 @@
-_bw_load_secrets() {
-  export YOUR_API_KEY=$(bw get username "api-example")
+_setup() {
+  export YOUR_API_KEY=$(rbw get "api-example")
+  export YOUR_API_ID=$(rbw get "api-example" --field=username)
 }

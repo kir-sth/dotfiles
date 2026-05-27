@@ -1,11 +1,3 @@
-_bwu() {
-  export BW_SESSION=$(bw unlock --raw) || return 1
-}
-
-_bwl() {
-  bw list items --search "$1" | jq -r '.[].name'
-}
-
 _up() {
   brew update
   brew upgrade --greedy

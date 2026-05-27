@@ -17,11 +17,7 @@ alias up="_up"
 alias gc="_gc"
 alias status="_status"
 alias brewed="_brewed"
-
-# BITWARDEN
-alias bwu="_bwu && _bw_load_secrets"
-alias bwg="bw get password"
-alias bwl="_bwl"
+alias setup="_setup"
 
 # MISC
 alias alert="osascript -e 'display notification \"Done!\" with title \"Terminal\" sound name \"Crystal\"'"
