@@ -15,7 +15,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Dev TUI          | code2prompt, lazygit, sqlit-tui, ghgrab            |
 | AI TUI           | Claude Code, Crush                                 |
 | AI GUI           | Claude Desktop, ChatGPT, Perplexity                |
-| GUI Apps         | Arc, Ferrite, Figma, IINA, Raycast                 |
+| GUI Apps         | Zen, Ferrite, Figma, IINA, Raycast                 |
 | Utils            | rwb, Bitwarden, Stats                              |
 
 ## Structure
