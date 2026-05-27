@@ -1,3 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+typeset -U path PATH
+
 SHELL_SESSIONS_DISABLE=1

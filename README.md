@@ -6,7 +6,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 | Category         | Tools                                              |
 | ---------------- | -------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, OrbStack                 |
+| System           | chezmoi, mole, syncthing, rwb, OrbStack            |
 | Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin) |
 | CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                |
 | CLI Extras       | dust, procs, bottom, tlrc, freeze, glow, ffmpeg    |
@@ -15,8 +15,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Dev TUI          | code2prompt, lazygit, sqlit-tui, ghgrab            |
 | AI TUI           | Claude Code, Crush                                 |
 | AI GUI           | Claude Desktop, ChatGPT, Perplexity                |
-| GUI Apps         | Zen, Ferrite, Figma, IINA, Raycast                 |
-| Utils            | rwb, Bitwarden, Stats                              |
+| GUI Apps         | Zen, Ferrite, Figma, IINA, Raycast, Stats          |
 
 ## Structure
 
