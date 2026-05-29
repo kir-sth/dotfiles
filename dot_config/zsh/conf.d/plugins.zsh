@@ -14,5 +14,5 @@ else
   compinit -C -d "$ZSH_COMPDUMP"
 fi
 
-[[ ! -f "${ZSH_COMPDUMP}.zwc" || "$ZSH_COMPDUMP" -nt "${ZSH_COMPDUMP}.zwc" ]] \
-  && zcompile "$ZSH_COMPDUMP"
+[[ ! -f "${ZSH_COMPDUMP}.zwc" || "$ZSH_COMPDUMP" -nt "${ZSH_COMPDUMP}.zwc" ]] &&
+  zcompile "$ZSH_COMPDUMP"
