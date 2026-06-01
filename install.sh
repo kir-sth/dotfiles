@@ -59,6 +59,7 @@ step "Runtime directories"
 mkdir -p "$HOME/.local/state/zsh"
 mkdir -p "$HOME/.local/state/mise"
 mkdir -p "$HOME/.local/state/atuin/logs"
+mkdir -p "$HOME/.local/state/fzf"
 ok "Created"
 
 # ── 6. Homebrew packages ─────────────────────────────────────────────────────
