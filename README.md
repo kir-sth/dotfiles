@@ -21,6 +21,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ```bash
 ~/.config/atuin/config.toml      # shell history
+~/.config/bottom/bottom.toml     # system monitor
 ~/.config/brew/Brewfile          # homebrew packages
 ~/.config/freeze/user.json       # code screenshot tool
 ~/.config/ghostty/config         # ghostty terminal

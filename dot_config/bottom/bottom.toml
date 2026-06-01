@@ -1,0 +1,31 @@
+[flags]
+# Refresh
+rate = "2s"
+retention = "10m"
+
+# Display
+battery = true
+enable_cache_memory = true
+network_use_bytes = true
+hide_table_gap = true
+
+# Processes
+tree = true
+temperature_type = "c"
+
+[styles]
+theme = "nord"
+
+[disk.mount_filter]
+is_list_ignored = true
+list = ["devfs", "/private/var/.*", "map .*"]
+regex = true
+case_sensitive = false
+whole_word = false
+
+[network.interface_filter]
+is_list_ignored = true
+list = ["lo0", "llw.*", "anpi.*", "bridge.*", "awdl.*", "p2p.*", "ap.*"]
+regex = true
+case_sensitive = false
+whole_word = false
