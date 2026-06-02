@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  nerdFontsVersion: "3"
+  showIcons: true
+  showBranchCommitHash: true
+  showDivergenceFromBaseBranch: arrowAndNumber
+  sidePanelWidth: 0.25
+  scrollHeight: 5
+  scrollPastBottom: true
+
+git:
+  overrideGpg: true
+
+  branchLogCmd: >
+    git log --graph --color=always --abbrev-commit
+    --decorate --date=relative --pretty=medium
+    {{branchName}} --
+
+  pagers:
+    - pager: delta --paging=never
+      colorArg: always
+
+    - pager: delta --paging=never --side-by-side
+      colorArg: always
+
+  merging:
+    manualCommit: false
+
+update:
+  method: never
+
+os:
+  editPreset: nvim
+
+customCommands:
+  - key: "P"
+    context: "localBranches"
+    description: "Force push with lease"
+    command: >
+      git push --force-with-lease origin
+      {{.SelectedLocalBranch.Name}}
+    loadingText: "Force pushing..."
+
+  - key: "R"
+    context: "commits"
+    description: "Interactive rebase from this commit"
+    prompts:
+      - type: "confirm"
+        title: "Interactive Rebase"
+        body: "Start rebase from selected commit?"
+    command: >
+      git rebase -i {{.SelectedCommit.Sha}}^
+    output: terminal
+    loadingText: "Rebasing..."
+
+  - key: "O"
+    context: "files"
+    description: "Open remote repository"
+    command: >
+      open $(git remote get-url origin)
+
+  - key: "D"
+    context: "localBranches"
+    description: "Delete merged branches"
+    command: >
+      git branch --merged main |
+      grep -vE '(^\*|main|master)' |
+      xargs -r git branch -d
