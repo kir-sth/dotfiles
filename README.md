@@ -4,48 +4,49 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                              |
-| ---------------- | -------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, rwb, OrbStack            |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin) |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                |
-| CLI Extras       | dust, procs, bottom, tlrc, freeze, glow, ffmpeg    |
-| Editor / IDE     | Neovim (AstroNvim), Zed                            |
-| Dev Tools        | mise, uv, bun, cargo, gh, just, task               |
-| Dev TUI          | code2prompt, lazygit, sqlit-tui, ghgrab            |
-| AI TUI           | Claude Code, Crush                                 |
-| AI GUI           | Claude Desktop, ChatGPT, Perplexity                |
-| GUI Apps         | Zen, Ferrite, Figma, IINA, Raycast, Stats          |
+| Category         | Tools                                                 |
+| ---------------- | ----------------------------------------------------- |
+| System           | chezmoi, mole, syncthing, rwb, OrbStack               |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)    |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                   |
+| CLI Extras       | dust, procs, bottom, tlrc, freeze, glow, ffmpeg, diff |
+| Editor / IDE     | Neovim (AstroNvim), Zed                               |
+| Dev Tools        | mise, uv, bun, cargo, gh, just, task                  |
+| Dev TUI          | code2prompt, lazygit, sqlit-tui, ghgrab               |
+| AI TUI           | Claude Code, Crush                                    |
+| AI GUI           | Claude Desktop, ChatGPT, Perplexity                   |
+| GUI Apps         | Zen, Ferrite, Figma, IINA, Raycast, Stats             |
 
 ## Structure
 
 ```bash
-~/.config/atuin/config.toml      # shell history
-~/.config/bottom/bottom.toml     # system monitor
-~/.config/brew/Brewfile          # homebrew packages
-~/.config/freeze/user.json       # code screenshot tool
-~/.config/ghostty/config         # ghostty terminal
-~/.config/glow/config            # markdown reader
-~/.config/mise/mise.toml         # runtime versions
-~/.config/mole/whitelist         # mole cleaner whitelist
-~/.config/nvim/                  # neovim (AstroNvim)
-~/.config/sheldon/plugins.toml   # sheldon plugin definitions
-~/.config/starship/starship.toml # prompt
-~/.config/tmux/tmux.conf         # tmux
-~/.config/zsh/
-├── .zshrc                       # entry point
-├── .zprofile                    # brew shellenv
-├── local.zsh                    # secrets (not tracked)
-└── conf.d/
-    ├── aliases.zsh              # all aliases
-    ├── env.zsh                  # exports
-    ├── functions.zsh            # shell functions
-    ├── inits.zsh                # tool inits and completions
-    ├── keybindings.zsh          # keybindings
-    ├── options.zsh              # setopt, history
-    └── plugins.zsh              # compinit + sheldon
-~/.gitconfig                     # git
-~/.zshenv                        # ZDOTDIR
+~/.config/
+├── atuin                       # shell history sync
+├── bottom                      # system monitor
+├── brew                        # homebrew bundle
+├── freeze                      # code screenshot tool
+├── ghostty                     # terminal emulator settings
+├── git                         # git config
+├── glow                        # markdown reader
+├── mise                        # dev tools manager
+├── mole                        # cleaner whitelist
+├── nvim                        # AstroNvim
+├── sheldon                     # plugin definitions
+├── starship                    # shell prompt
+├── tmux                        # terminal multiplexer
+└── zsh/
+    ├── .zshrc                  # entry point
+    ├── .zprofile               # brew shellenv
+    ├── local.zsh               # secrets (not tracked)
+    └── conf.d/
+        ├── aliases.zsh         # aliases
+        ├── env.zsh             # exports
+        ├── functions.zsh       # shell functions
+        ├── inits.zsh           # tool inits
+        ├── keybindings.zsh     # keyboard shortcuts
+        ├── options.zsh         # setopt, history
+        └── plugins.zsh         # compinit + sheldon
+~/.zshenv                       # ZDOTDIR
 ```
 
 ## Install
