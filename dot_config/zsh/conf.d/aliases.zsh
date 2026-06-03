@@ -18,6 +18,7 @@ alias gc="_gc"
 alias status="_status"
 alias brewed="_brewed"
 alias setup="_setup"
+alias y="_y"
 
 # MISC
 alias alert="osascript -e 'display notification \"Done!\" with title \"Terminal\" sound name \"Crystal\"'"

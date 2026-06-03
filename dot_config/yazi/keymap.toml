@@ -1,0 +1,19 @@
+[[mgr.prepend_keymap]]
+on = ["g", "h"]
+run = "cd ~"
+desc = "Go to home"
+
+[[mgr.prepend_keymap]]
+on = ["g", "c"]
+run = "cd ~/.config"
+desc = "Go to ~/.config"
+
+[[mgr.prepend_keymap]]
+on = ["g", "w"]
+run = "cd ~/wd"
+desc = "Go to ~/wd"
+
+[[mgr.prepend_keymap]]
+on = ["<C-n>"]
+run = "create"
+desc = "Create file or directory"

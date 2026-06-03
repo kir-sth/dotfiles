@@ -7,6 +7,8 @@ README.md
 
 .config/nvim/lazy-lock.json
 
+.config/yazi/flavors
+
 .config/zsh/.zcompcache
 .config/zsh/local.zsh
 .config/zsh/zcompdump

@@ -1,6 +1,9 @@
 # NeoVim
 dot_config/nvim/lazy-lock.json
 
+# Yazi
+dot_config/yazi/flavors
+
 # zsh
 dot_config/zsh/.zcompcache
 dot_config/zsh/local.zsh

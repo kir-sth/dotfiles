@@ -1,0 +1,29 @@
+[mgr]
+ratio = [1, 2, 3]
+sort_by = "natural"
+sort_reverse = false
+show_hidden = true
+show_symlink = true
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true, desc = "nvim" },
+]
+zed = [
+  { run = 'zed "$@"', orphan = true, desc = "zed" },
+]
+open = [
+  { run = 'open "$@"', desc = "macOS open" },
+]
+
+[open]
+rules = [
+  { mime = "text/*", use = ["edit", "zed"] },
+  { mime = "application/json", use = ["edit", "zed"] },
+  { mime = "inode/x-empty", use = ["edit", "zed"] },
+  { mime = "image/*", use = ["open"] },
+  { mime = "video/*", use = ["open"] },
+  { mime = "audio/*", use = ["open"] },
+  { mime = "application/pdf", use = ["open"] },
+  { mime = "*", use = ["open"] },
+]

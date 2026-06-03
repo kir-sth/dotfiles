@@ -72,7 +72,12 @@ step "mise tools"
 mise install
 ok "Installed"
 
-# ── 8. Sheldon plugins ───────────────────────────────────────────────────────
+# ── 8. Yazi packages ─────────────────────────────────────────────────────────
+step "Yazi packages"
+ya pkg install
+ok "Installed"
+
+# ── 9. Sheldon plugins ───────────────────────────────────────────────────────
 step "Sheldon plugins"
 sheldon lock
 ok "Locked"
