@@ -1,6 +1,5 @@
-# Mole Whitelist - Protected paths won't be deleted
-# Default protections: Playwright browsers, HuggingFace models, Maven repo, Ollama models, Surge Mac, R renv, Finder metadata
-# Add one pattern per line to keep items safe.
+# Mole Whitelist - protected paths won't be deleted
+# Add one pattern per line to keep items safe
 
 # macOS
 ~/Library/Application Support/com.apple.wallpaper
@@ -8,43 +7,34 @@
 ~/Library/Caches/CloudKit
 ~/Library/Mobile Documents
 
-# Raycast
+# apps
+~/Library/Application Support/Claude
+~/Library/Application Support/com.openai.chat
 ~/Library/Application Support/com.raycast.macos
 ~/Library/Application Support/com.raycast.shared
+~/Library/Application Support/Syncthing
+~/Library/Application Support/Zed
 
-# Homebrew / mise / pnpm / uv
-~/Library/Caches/Homebrew
+# config
+~/.config
+
+# state
+~/.local/state
+
+# share
+~/.local/share/atuin
+~/.local/share/chezmoi
+~/.local/share/crush
 ~/.local/share/mise
-~/.cache/mise
-~/.local/share/pnpm/store
-~/.cache/uv
+~/.local/share/nvim
+~/.local/share/orbstack
+~/.local/share/sheldon
 
-# dev caches
+# cache
+~/.cache/mise
+~/.cache/nvim
 ~/.cache/pre-commit
 ~/.cache/pytest
-
-# sheldon
-~/.local/share/sheldon
 ~/.cache/sheldon
-
-# chezmoi source
-~/.local/share/chezmoi
-
-# utils
-~/.local/share/atuin
-~/.local/state/atuin
-
-# astro nvim
-~/.local/share/nvim
-~/.local/state/nvim
-~/.cache/nvim
-
-# apps
-~/Library/Application Support/Zed
-~/Library/Application Support/Syncthing
-~/Library/Application Support/obsidian
-
-# mole
-~/.config/mole
-~/.cache/mole
+~/.cache/uv
 
