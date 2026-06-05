@@ -2,19 +2,27 @@
 
 Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](https://www.chezmoi.io/).
 
+Goals:
+
+- XDG-first layout
+- Reproducible setup via Brewfile and mise
+- Minimal and composable CLI tooling
+- Fast interactive zsh environment
+- Single-command bootstrap on a fresh machine
+
 ## Stack
 
-| Category         | Tools                                                     |
-| ---------------- | --------------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, rwb, OrbStack                   |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)        |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                       |
-| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, diff, freeze |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                   |
-| Dev Tools        | mise, uv, bun, cargo, gh, just, task                      |
-| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow       |
-| AI               | Claude Code, Crush, Claude Desktop, ChatGPT, Perplexity   |
-| Apps             | Zen, Ferrite, Figma, IINA, Raycast, Stats                 |
+| Category         | Tools                                                      |
+| ---------------- | ---------------------------------------------------------- |
+| System           | chezmoi, mole, syncthing, rbw, OrbStack                    |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)         |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                        |
+| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
+| Editor / IDE     | Neovim (AstroNvim), Zed                                    |
+| Dev Tools        | mise, uv, bun, cargo, gh, just, task                       |
+| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow        |
+| AI               | Claude Code, Crush, Claude Desktop, ChatGPT, Perplexity    |
+| Apps             | Zen, Ferrite, Figma, IINA, Raycast, Stats                  |
 
 ## Structure
 
@@ -66,7 +74,7 @@ curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | 
 3. Installs chezmoi
 4. Initializes and applies dotfiles via chezmoi
 5. Creates runtime directories
-6. Installs packages from Brewfile
+6. Installs packages and applications from Brewfile
 7. Installs mise tools
 8. Installs yazi packages and themes
 9. Locks sheldon plugins
@@ -82,8 +90,8 @@ rbw register
 nvim
 # :AstroUpdate — update AstroNvim framework + Lazy plugins + Mason tools
 
-# Fill with your API keys
-# Recommended: store API keys in Bitwarden and export them as env vars
+# Configure local secrets and API keys
+# Recommended: store secrets in Bitwarden and export them via local.zsh
 nvim ~/.config/zsh/local.zsh
 ```
 
@@ -95,13 +103,13 @@ brewfile     # cat Brewfile
 misefile     # cat mise.toml
 configs      # open chezmoi source in nvim + apply
 
-# General
-up           # brew update + upgrade + bundle (includes mas apps) + mise upgrade
-gc           # brew clean + mole clean + mise prune
-brewed       # dump current state to Brewfile
-status       # brew bundle check + chezmoi diff
-setup        # unlock bitwarden + load env vars from local.zsh
-y            # open yazi and change dir on exit
+# General (interactive run)
+up           # update Homebrew packages, apps, and mise tools
+gc           # clean Homebrew, mole caches, and unused mise assets
+brewed       # sync current Homebrew state back to Brewfile and chezmoi
+status       # check Brewfile drift and pending chezmoi changes
+setup        # unlock Bitwarden and load local environment variables
+y            # open yazi and change shell directory on exit
 ```
 
 ## Updating dotfiles

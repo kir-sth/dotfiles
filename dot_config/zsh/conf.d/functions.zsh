@@ -1,27 +1,61 @@
+_step() {
+  gum style \
+    --border normal \
+    --border-foreground 240 \
+    --padding "0 1" \
+    --foreground 244 \
+    "\$ $1"
+}
+
+_run_tasks() {
+  local cmd selected
+
+  selected=$(
+    printf "%s\n" "$@" | gum choose --no-limit
+  ) || return
+
+  for cmd in ${(f)selected}; do
+    _step "$cmd"
+    eval "$cmd"
+  done
+}
+
 _up() {
-  brew update
-  brew upgrade --greedy
-  brew bundle --file=$BREWFILE
-  mise upgrade
+  local -a tasks=(
+    "brew update"
+    "brew upgrade --greedy"
+    "brew bundle --file=\"$BREWFILE\""
+    "mise upgrade"
+  )
+  _run_tasks "${tasks[@]}"
 }
 
 _gc() {
-  brew bundle cleanup --force --file=$BREWFILE
-  brew autoremove
-  brew cleanup --prune=all
-  mole clean
-  mole purge
-  mise prune
+  local -a tasks=(
+    "brew bundle cleanup --force --file=\"$BREWFILE\""
+    "brew autoremove"
+    "brew cleanup --prune=all"
+    "mole clean"
+    "mole purge"
+    "mise prune"
+  )
+  _run_tasks "${tasks[@]}"
 }
 
 _status() {
-  brew bundle cleanup --file=$BREWFILE
-  chezmoi diff
+  local -a tasks=(
+    "true | brew bundle cleanup --file=\"$BREWFILE\""
+    "chezmoi diff | delta --paging=never"
+  )
+  _run_tasks "${tasks[@]}"
 }
 
 _brewed() {
-  brew bundle dump --force --file=$BREWFILE
-  chezmoi add $BREWFILE
+  local -a tasks=(
+    "brew bundle dump --force --file=\"$BREWFILE\""
+    "chezmoi add \"$BREWFILE\""
+  )
+  _run_tasks "${tasks[@]}"
 }
 
 _y() {
