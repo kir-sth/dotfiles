@@ -1,12 +1,3 @@
-# HOMEBREW
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_ENV_HINTS=1
-export HOMEBREW_BAT=1
-
-# MAS
-export MAS_NO_AUTO_INDEX=1
-
 # XDG BASE
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -15,7 +6,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_RUNTIME_DIR="${TMPDIR%/}"
 
 # XDG CONFIGS
-export BREWFILE="$XDG_CONFIG_HOME/brew/Brewfile"
 export CRUSH_GLOBAL_CONFIG="$XDG_CONFIG_HOME/crush"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
@@ -24,7 +14,7 @@ export SHELDON_CONFIG_DIR="$XDG_CONFIG_HOME/sheldon"
 export SQLIT_CONFIG_DIR="$XDG_CONFIG_HOME/sqlit"
 export ZSH_COMPDUMP="$XDG_CONFIG_HOME/zsh/zcompdump"
 
-# XDG
+# XDG DATA
 export IPYTHONDIR="$XDG_DATA_HOME/ipython"
 export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
 export BUN_INSTALL="$XDG_DATA_HOME/mise/bun"
@@ -39,6 +29,16 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 # XDG CACHE
 export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
 export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
+
+# HOMEBREW
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_BAT=1
+export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/homebrew/Brewfile"
+
+# MAS
+export MAS_NO_AUTO_INDEX=1
 
 # EDITOR
 export EDITOR="nvim"

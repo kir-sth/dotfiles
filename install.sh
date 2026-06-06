@@ -6,7 +6,7 @@
 set -euo pipefail
 
 GITHUB_USER="kir-sth"
-BREWFILE="$HOME/.config/brew/Brewfile"
+BREWFILE="$HOME/.config/homebrew/Brewfile"
 CHEZMOI_DIR="$HOME/.local/share/chezmoi"
 
 # ── Helpers ──────────────────────────────────────────────────────────────────

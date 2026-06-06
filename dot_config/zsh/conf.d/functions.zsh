@@ -24,7 +24,7 @@ _up() {
   local -a tasks=(
     "brew update"
     "brew upgrade --greedy"
-    "brew bundle --file=\"$BREWFILE\""
+    "brew bundle"
     "mise upgrade"
   )
   _run_tasks "${tasks[@]}"
@@ -32,7 +32,7 @@ _up() {
 
 _gc() {
   local -a tasks=(
-    "brew bundle cleanup --force --file=\"$BREWFILE\""
+    "brew bundle cleanup --force"
     "brew autoremove"
     "brew cleanup --prune=all"
     "mole clean"
@@ -44,7 +44,7 @@ _gc() {
 
 _status() {
   local -a tasks=(
-    "true | brew bundle cleanup --file=\"$BREWFILE\""
+    "true | brew bundle cleanup"
     "chezmoi diff | delta --paging=never"
   )
   _run_tasks "${tasks[@]}"
@@ -52,8 +52,8 @@ _status() {
 
 _brewed() {
   local -a tasks=(
-    "brew bundle dump --force --file=\"$BREWFILE\""
-    "chezmoi add \"$BREWFILE\""
+    "brew bundle dump --force"
+    "chezmoi add \"$HOMEBREW_BUNDLE_FILE\""
   )
   _run_tasks "${tasks[@]}"
 }

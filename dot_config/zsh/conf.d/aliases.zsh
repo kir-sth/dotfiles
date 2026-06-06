@@ -1,5 +1,5 @@
 # CONFIGS
-alias brewfile="bat -pp -l ruby $BREWFILE"
+alias brewfile="bat -pp -l ruby $HOMEBREW_BUNDLE_FILE"
 alias misefile="bat -pp $XDG_CONFIG_HOME/mise/mise.toml"
 alias configs="(cd $XDG_DATA_HOME && nvim chezmoi) && chezmoi apply"
 

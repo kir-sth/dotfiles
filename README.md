@@ -30,11 +30,11 @@ Goals:
 ~/.config/
 ├── atuin                       # shell history sync
 ├── bottom                      # system monitor
-├── brew                        # homebrew bundle
 ├── freeze                      # code screenshot tool
 ├── ghostty                     # terminal emulator settings
 ├── git                         # git config
 ├── glow                        # markdown reader
+├── homebrew                    # brew bundle and trust
 ├── mise                        # dev tools manager
 ├── mole                        # cleaner whitelist
 ├── nvim                        # AstroNvim
