@@ -32,15 +32,15 @@ brew "tlrc"
 brew "tmux"
 brew "yazi"
 brew "zoxide"
-brew "charmbracelet/tap/crush"
-brew "charmbracelet/tap/freeze"
-brew "charmbracelet/tap/glow"
-brew "charmbracelet/tap/gum"
+brew "charmbracelet/tap/crush", trusted: true
+brew "charmbracelet/tap/freeze", trusted: true
+brew "charmbracelet/tap/glow", trusted: true
+brew "charmbracelet/tap/gum", trusted: true
 cask "amneziavpn"
 cask "chatgpt"
 cask "claude"
 cask "claude-code"
-cask "olaproeis/ferrite/ferrite"
+cask "olaproeis/ferrite/ferrite", trusted: true
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"

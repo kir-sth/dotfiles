@@ -53,7 +53,7 @@ _status() {
 _brewed() {
   local -a tasks=(
     "brew bundle dump --force"
-    "chezmoi add \"$HOMEBREW_BUNDLE_FILE\""
+    "chezmoi add \"$XDG_CONFIG_HOME/homebrew\""
   )
   _run_tasks "${tasks[@]}"
 }
