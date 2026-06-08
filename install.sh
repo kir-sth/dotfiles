@@ -60,6 +60,7 @@ mkdir -p "$HOME/.local/state/zsh"
 mkdir -p "$HOME/.local/state/mise"
 mkdir -p "$HOME/.local/state/atuin/logs"
 mkdir -p "$HOME/.local/state/fzf"
+mkdir -p "$HOME/.cache/zsh"
 ok "Created"
 
 # ── 6. Homebrew packages ─────────────────────────────────────────────────────

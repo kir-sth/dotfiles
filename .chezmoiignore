@@ -9,7 +9,4 @@ README.md
 
 .config/yazi/flavors
 
-.config/zsh/.zcompcache
 .config/zsh/local.zsh
-.config/zsh/zcompdump
-.config/zsh/zcompdump.zwc

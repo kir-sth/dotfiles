@@ -3,4 +3,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 typeset -U path PATH
 
-SHELL_SESSIONS_DISABLE=1
+export SHELL_SESSIONS_DISABLE=1

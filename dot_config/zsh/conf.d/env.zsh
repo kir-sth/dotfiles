@@ -12,7 +12,6 @@ export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export SHELDON_CONFIG_DIR="$XDG_CONFIG_HOME/sheldon"
 export SQLIT_CONFIG_DIR="$XDG_CONFIG_HOME/sqlit"
-export ZSH_COMPDUMP="$XDG_CONFIG_HOME/zsh/zcompdump"
 
 # XDG DATA
 export IPYTHONDIR="$XDG_DATA_HOME/ipython"
@@ -29,6 +28,7 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 # XDG CACHE
 export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
 export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
+export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
 # HOMEBREW
 export HOMEBREW_BAT=1
