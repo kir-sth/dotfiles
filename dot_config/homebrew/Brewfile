@@ -47,8 +47,8 @@ cask "ghostty"
 cask "iina"
 cask "orbstack"
 cask "raycast"
-cask "stats"
 cask "zed"
 cask "zen"
+mas "Better Resource Monitor", id: 6758237306
 mas "Perplexity", id: 6714467650
 mas "Telegram", id: 747648890

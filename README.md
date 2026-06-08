@@ -2,8 +2,6 @@
 
 Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](https://www.chezmoi.io/).
 
-Goals:
-
 - XDG-first layout
 - Reproducible setup via Brewfile and mise
 - Minimal and composable CLI tooling
@@ -12,17 +10,17 @@ Goals:
 
 ## Stack
 
-| Category         | Tools                                                      |
-| ---------------- | ---------------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, rbw, OrbStack                    |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)         |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                        |
-| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                    |
-| Dev Tools        | mise, uv, bun, cargo, gh, just, task                       |
-| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow        |
-| AI               | Claude Code, Crush, Claude Desktop, ChatGPT, Perplexity    |
-| Apps             | Zen, Ferrite, Figma, IINA, Raycast, Stats                  |
+| Category         | Tools                                                       |
+| ---------------- | ----------------------------------------------------------- |
+| System           | chezmoi, mole, syncthing, rbw, OrbStack                     |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)          |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, moor                         |
+| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze  |
+| Editor / IDE     | Neovim (AstroNvim), Zed                                     |
+| Dev Tools        | mise, uv, bun, cargo, gh, just, task                        |
+| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow         |
+| AI               | Claude Code, Crush, Claude Desktop, ChatGPT, Perplexity     |
+| Apps             | Zen, Ferrite, Figma, IINA, Raycast, Better Resource Monitor |
 
 ## Structure
 
