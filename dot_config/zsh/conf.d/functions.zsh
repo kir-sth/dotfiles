@@ -1,12 +1,3 @@
-_step() {
-  gum style \
-    --border normal \
-    --border-foreground 240 \
-    --padding "0 1" \
-    --foreground 244 \
-    "\$ $1"
-}
-
 _run_tasks() {
   local cmd selected
 
@@ -15,7 +6,12 @@ _run_tasks() {
   ) || return
 
   for cmd in ${(f)selected}; do
-    _step "$cmd"
+    gum style \
+      --border normal \
+      --border-foreground 240 \
+      --padding "0 1" \
+      --foreground 244 \
+      "$cmd"
     eval "$cmd"
   done
 }
@@ -46,6 +42,7 @@ _status() {
   local -a tasks=(
     "true | brew bundle cleanup"
     "chezmoi diff | delta --paging=never"
+    "git -C $XDG_DATA_HOME/chezmoi -c core.pager=\"delta --paging=never\" diff"
   )
   _run_tasks "${tasks[@]}"
 }
