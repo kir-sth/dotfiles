@@ -7,7 +7,7 @@ rust = "latest"
 cargo-binstall = "latest"
 
 "cargo:sccache" = { version = "latest" }
-"github:abhixdd/ghgrab" = { version = "latest" }
+"cargo:ghgrab" = { version = "latest" }
 "pipx:sqlit-tui" = { version = "latest", extras = ["ssh"] }
 
 [settings]
