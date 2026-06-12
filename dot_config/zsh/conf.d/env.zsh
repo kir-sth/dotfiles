@@ -32,9 +32,6 @@ export SCCACHE_DIR="$XDG_CACHE_HOME/mise/sccache"
 export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
-# MAS
-export MAS_NO_AUTO_INDEX=1
-
 # EDITOR
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -70,3 +67,7 @@ export YSU_MESSAGE_FORMAT="💡 alias: %alias"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# MISC
+export MAS_NO_AUTO_INDEX=1
+export MOLE_ENABLE_DISK_VERIFY=1
