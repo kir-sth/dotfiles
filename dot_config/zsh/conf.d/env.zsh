@@ -18,6 +18,7 @@ export IPYTHONDIR="$XDG_DATA_HOME/ipython"
 export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
 export BUN_INSTALL="$XDG_DATA_HOME/mise/bun"
 export CARGO_HOME="$XDG_DATA_HOME/mise/cargo"
+export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/homebrew/Brewfile"
 export RUSTUP_HOME="$XDG_DATA_HOME/mise/rustup"
 export SHELDON_DATA_DIR="$XDG_DATA_HOME/sheldon"
 
@@ -30,14 +31,6 @@ export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
 export SCCACHE_DIR="$XDG_CACHE_HOME/mise/sccache"
 export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
-
-# HOMEBREW
-export HOMEBREW_BAT=1
-export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/homebrew/Brewfile"
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_ENV_HINTS=1
-export HOMEBREW_REQUIRE_TAP_TRUST=1
 
 # MAS
 export MAS_NO_AUTO_INDEX=1

@@ -32,7 +32,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 ├── ghostty                     # terminal emulator settings
 ├── git                         # git config
 ├── glow                        # markdown reader
-├── homebrew                    # brew bundle and trust
+├── homebrew                    # brew bundle, env and trust
 ├── mise                        # dev tools manager
 ├── mole                        # cleaner whitelist
 ├── nvim                        # AstroNvim
