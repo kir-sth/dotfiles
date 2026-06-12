@@ -13,6 +13,7 @@ cargo-binstall = "latest"
 [settings]
 cargo.binstall = true
 experimental = true
+minimum_release_age = "3d"
 npm.package_manager = "bun"
 pipx.uvx = true
 python.uv_venv_auto = "source"
