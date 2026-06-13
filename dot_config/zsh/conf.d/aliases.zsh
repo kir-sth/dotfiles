@@ -11,6 +11,8 @@ alias tree="eza --tree -lah --icons --level=3 --git --git-ignore"
 alias cat="bat -pp"
 alias ps="procs"
 alias du="dust -r"
+alias jq="jaq"
+alias jnv="jnv --config $XDG_CONFIG_HOME/jnv/config.toml"
 
 # GENERAL
 alias up="_up"

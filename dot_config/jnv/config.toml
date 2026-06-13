@@ -1,0 +1,92 @@
+no_hint = false
+
+# Editor (focused)
+
+[editor.on_focus]
+edit_mode = "Insert"
+word_break_chars = [".", "|", "(", ")", "[", "]"]
+prefix = "❯ "
+prefix_style = "fg=#A6E22E,attr=bold"
+active_char_style = "attr=reverse"
+inactive_char_style = ""
+
+# Editor (unfocused)
+
+[editor.on_defocus]
+prefix = "· "
+prefix_style = "fg=#75715E"
+active_char_style = "attr=dim"
+inactive_char_style = "attr=dim"
+
+# JSON viewer
+
+[json]
+max_streams = 1000
+
+[json.stream]
+indent = 2
+curly_brackets_style = "fg=#F8F8F2,attr=bold"
+square_brackets_style = "fg=#F8F8F2,attr=bold"
+key_style = "fg=#66D9EF"
+string_value_style = "fg=#E6DB74"
+number_value_style = "fg=#AE81FF"
+boolean_value_style = "fg=#F92672"
+null_value_style = "fg=#75715E,attr=dim"
+active_item_attribute = "bold"
+inactive_item_attribute = "dim"
+overflow_mode = "Wrap"
+
+# Completion
+
+[completion]
+search_result_chunk_size = 100
+search_load_chunk_size = 50000
+
+[completion.listbox]
+lines = 5
+cursor = "❯ "
+active_item_style = "fg=#272822,bg=#66D9EF"
+inactive_item_style = "fg=#75715E"
+
+# Keybinds (global)
+
+[keybinds]
+exit = ["Ctrl+C"]
+copy_query = ["Ctrl+Q"]
+copy_result = ["Ctrl+O"]
+switch_mode = ["Shift+Down", "Shift+Up"]
+
+# Keybinds: editor
+
+[keybinds.on_editor]
+backward = ["Left"]
+forward = ["Right"]
+move_to_head = ["Ctrl+A"]
+move_to_tail = ["Ctrl+E"]
+move_to_previous_nearest = ["Alt+B"]
+move_to_next_nearest = ["Alt+F"]
+erase = ["Backspace"]
+erase_all = ["Ctrl+U"]
+erase_to_previous_nearest = ["Ctrl+W"]
+erase_to_next_nearest = ["Alt+D"]
+completion = ["Tab"]
+on_completion.up = ["Up"]
+on_completion.down = ["Down", "Tab"]
+
+# Keybinds: JSON viewer
+
+[keybinds.on_json_viewer]
+up = ["Up", "Ctrl+K", "ScrollUp"]
+down = ["Down", "Ctrl+J", "ScrollDown"]
+move_to_head = ["Ctrl+L"]
+move_to_tail = ["Ctrl+H"]
+toggle = ["Enter"]
+expand = ["Ctrl+P"]
+collapse = ["Ctrl+N"]
+
+# Reactivity
+
+[reactivity_control]
+query_debounce_duration = "400ms"
+resize_debounce_duration = "150ms"
+spin_duration = "200ms"
