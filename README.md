@@ -32,7 +32,8 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 ├── ghostty                     # terminal emulator settings
 ├── git                         # git config
 ├── glow                        # markdown reader
-├── homebrew                    # brew bundle, env and trust
+├── homebrew                    # brew bundle and env
+├── lazygit                     # terminal UI for git commands
 ├── jnv                         # interactive json viewer
 ├── mise                        # dev tools manager
 ├── mole                        # cleaner whitelist
