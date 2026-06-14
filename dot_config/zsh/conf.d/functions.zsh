@@ -47,10 +47,18 @@ _status() {
   _run_tasks "${tasks[@]}"
 }
 
-_brewed() {
+_lock() {
   local -a tasks=(
     "brew bundle dump --force"
-    "chezmoi add \"$XDG_CONFIG_HOME/homebrew\""
+    "chezmoi add \"$XDG_CONFIG_HOME/homebrew/Brewfile\""
+    "chezmoi add \"$XDG_CONFIG_HOME/mise/mise.toml\""
+  )
+  _run_tasks "${tasks[@]}"
+}
+
+_check() {
+  local -a tasks=(
+    "brew vulns"
   )
   _run_tasks "${tasks[@]}"
 }

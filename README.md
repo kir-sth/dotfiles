@@ -106,8 +106,9 @@ configs      # open chezmoi source in nvim + apply
 # General (interactive run)
 up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
-brewed       # sync current Homebrew state back to Brewfile and chezmoi
-status       # check Brewfile drift and pending chezmoi changes
+status       # show Brewfile drift and pending chezmoi changes
+lock         # dump brew state and track Brewfile and mise.toml in chezmoi
+check        # run security checks
 setup        # unlock Bitwarden and load local environment variables
 y            # open yazi and change shell directory on exit
 ```
