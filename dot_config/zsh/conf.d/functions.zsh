@@ -59,6 +59,8 @@ _lock() {
 _check() {
   local -a tasks=(
     "brew vulns"
+    "ghgrab agent download https://github.com/perplexityai/bumblebee threat_intel --out \"$XDG_DATA_HOME/bumblebee\" --no-folder"
+    "bumblebee scan --profile deep --root \"$HOME\" --exposure-catalog \"$XDG_DATA_HOME/bumblebee/threat_intel\" --findings-only"
   )
   _run_tasks "${tasks[@]}"
 }
