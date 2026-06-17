@@ -12,7 +12,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 | Category         | Tools                                                       |
 | ---------------- | ----------------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, rbw, OrbStack                     |
+| System           | chezmoi, mole, syncthing, rbw, OrbStack, bumblebee          |
 | Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)          |
 | CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                    |
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze  |
@@ -24,7 +24,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Structure
 
-```bash
+```zsh
 ~/.config/
 ├── atuin                       # shell history sync
 ├── bottom                      # system monitor
@@ -43,17 +43,22 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 ├── tmux                        # terminal multiplexer
 ├── yazi                        # file manager
 └── zsh/
+    ├── conf.d/
+    │   ├── aliases.zsh         # aliases
+    │   ├── env.zsh             # exports
+    │   ├── inits.zsh           # tool inits
+    │   ├── keybindings.zsh     # keyboard shortcuts
+    │   ├── options.zsh         # setopt, history
+    │   └── plugins.zsh         # compinit + sheldon
+    ├── functions/
+    │   ├── bumblebee.zsh       # supply-chain catalog sync + scan
+    │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
+    │   ├── commands.zsh        # up/gc/status/lock/check workflows
+    │   ├── core.zsh            # shared task-runner helper
+    │   └── yazi.zsh            # yazi cd-on-exit wrapper
     ├── .zshrc                  # entry point
     ├── .zprofile               # brew shellenv
-    ├── local.zsh               # secrets (not tracked)
-    └── conf.d/
-        ├── aliases.zsh         # aliases
-        ├── env.zsh             # exports
-        ├── functions.zsh       # shell functions
-        ├── inits.zsh           # tool inits
-        ├── keybindings.zsh     # keyboard shortcuts
-        ├── options.zsh         # setopt, history
-        └── plugins.zsh         # compinit + sheldon
+    └── local.zsh               # secrets (not tracked)
 ~/.zshenv                       # ZDOTDIR
 ```
 
@@ -98,18 +103,21 @@ nvim ~/.config/zsh/local.zsh
 ## Usage
 
 ```bash
-# Config shortcuts
+# config shortcuts
 brewfile     # cat Brewfile
 misefile     # cat mise.toml
 configs      # open chezmoi source in nvim + apply
 
-# General (interactive run)
+# commands
 up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
 lock         # dump brew state and track Brewfile and mise.toml in chezmoi
 check        # run security checks
+
+# misc
 setup        # unlock Bitwarden and load local environment variables
+getmd        # fetch a URL as markdown via Cloudflare browser rendering
 y            # open yazi and change shell directory on exit
 ```
 

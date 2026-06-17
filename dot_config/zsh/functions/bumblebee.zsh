@@ -4,10 +4,9 @@ bumblebee::sync() {
   local tmp name url
 
   tmp=$(mktemp -d) || return 1
-  mkdir -p "$XDG_CACHE_HOME"
 
   while read -r name url; do
-    curl -fsSL "$url" -o "$tmp/${name:t}" || { rm -rf "$tmp"; return 1 }
+    curl -fsSL "$url" -o "$tmp/$name" || { rm -rf "$tmp"; return 1 }
   done < <(curl -fsSL "$api" | jaq -er '.[] | select(.name | endswith(".json")) | "\(.name) \(.download_url)"') \
     || { rm -rf "$tmp"; return 1 }
 
