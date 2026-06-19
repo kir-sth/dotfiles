@@ -10,6 +10,3 @@ for file in "$ZDOTDIR"/functions/*.zsh(N); do
   source "$file"
 done
 unset file
-
-# LOCAL
-[[ -f "$ZDOTDIR/local.zsh" ]] && source "$ZDOTDIR/local.zsh"

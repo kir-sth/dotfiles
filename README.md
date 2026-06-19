@@ -53,12 +53,12 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
     ├── functions/
     │   ├── bumblebee.zsh       # supply-chain catalog sync + scan
     │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
-    │   ├── commands.zsh        # up/gc/status/lock/check workflows
+    │   ├── commands.zsh        # interactive workflows
     │   ├── core.zsh            # shared task-runner helper
+    │   ├── setup.zsh           # bitwarden-backed environment exports
     │   └── yazi.zsh            # yazi cd-on-exit wrapper
     ├── .zshrc                  # entry point
-    ├── .zprofile               # brew shellenv
-    └── local.zsh               # secrets (not tracked)
+    └── .zprofile               # brew shellenv
 ~/.zshenv                       # ZDOTDIR
 ```
 
@@ -94,10 +94,6 @@ rbw register
 # Neovim plugins
 nvim
 # :AstroUpdate — update AstroNvim framework + Lazy plugins + Mason tools
-
-# Configure local secrets and API keys
-# Recommended: store secrets in Bitwarden and export them via local.zsh
-nvim ~/.config/zsh/local.zsh
 ```
 
 ## Usage
@@ -113,10 +109,10 @@ up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
 lock         # dump brew state and track Brewfile and mise.toml in chezmoi
+setup        # unlock Bitwarden and load secret environment variables
 check        # run security checks
 
 # misc
-setup        # unlock Bitwarden and load local environment variables
 getmd        # fetch a URL as markdown via Cloudflare browser rendering
 y            # open yazi and change shell directory on exit
 ```

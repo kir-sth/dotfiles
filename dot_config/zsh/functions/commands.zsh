@@ -38,6 +38,18 @@ lock() {
   core::run_tasks "${tasks[@]}"
 }
 
+setup() {
+  [[ ! -o interactive || ! -t 0 ]] && return 1
+  rbw unlocked &>/dev/null || rbw unlock || return 1
+
+  local -a tasks=(
+    "export::cloudflare"
+    "export::github"
+    "export::zai"
+  )
+  core::run_tasks "${tasks[@]}"
+}
+
 check() {
   local -a tasks=(
     "brew vulns"
