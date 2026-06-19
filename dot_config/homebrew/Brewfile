@@ -1,6 +1,7 @@
 tap "charmbracelet/tap"
 tap "homebrew/brew-vulns"
 tap "olaproeis/ferrite"
+brew "age"
 brew "atuin"
 brew "bat"
 brew "bottom"
