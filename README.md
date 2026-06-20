@@ -55,7 +55,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
     │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
     │   ├── commands.zsh        # interactive workflows
     │   ├── core.zsh            # shared task-runner helper
-    │   ├── setup.zsh           # bitwarden-backed environment exports
+    │   ├── secrets.zsh         # runtime credential injection wrappers
     │   └── yazi.zsh            # yazi cd-on-exit wrapper
     ├── .zshrc                  # entry point
     └── .zprofile               # brew shellenv
@@ -109,7 +109,6 @@ up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
 lock         # dump brew state and track Brewfile and mise.toml in chezmoi
-setup        # unlock Bitwarden and load secret environment variables
 check        # run security checks
 
 # misc

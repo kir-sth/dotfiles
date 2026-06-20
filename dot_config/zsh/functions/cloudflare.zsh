@@ -1,11 +1,11 @@
 getmd() {
-  local url="$1"
+  local url="${1:?usage: getmd <url> [output_file]}"
   local out="$2"
-  local payload res md
+  local account_id api_token payload res md
 
-  [[ -n "$url" ]] || return 1
-  [[ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]] || return 1
-  [[ -n "${CLOUDFLARE_API_TOKEN:-}" ]] || return 1
+  rbw unlocked &>/dev/null || rbw unlock || return 1
+  account_id=$(rbw get "api-cloudflare-browser-rendering" --field=username) || return 1
+  api_token=$(rbw get "api-cloudflare-browser-rendering") || return 1
 
   payload=$(jaq -n --arg url "$url" '{url: $url}')
 
@@ -16,8 +16,8 @@ getmd() {
       --fail \
       --max-time 30 \
       --request POST \
-      "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/browser-rendering/markdown" \
-      -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+      "https://api.cloudflare.com/client/v4/accounts/${account_id}/browser-rendering/markdown" \
+      -H "Authorization: Bearer ${api_token}" \
       -H "Content-Type: application/json" \
       -d "$payload"
   ) || return 1
