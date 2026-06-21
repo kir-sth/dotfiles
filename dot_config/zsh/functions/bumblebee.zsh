@@ -19,5 +19,6 @@ bumblebee::scan() {
     --root "$HOME" \
     --exposure-catalog "$XDG_CACHE_HOME/bumblebee" \
     --max-duration 10m \
-    --findings-only
+    --findings-only 2>&1 |
+    jaq .
 }
