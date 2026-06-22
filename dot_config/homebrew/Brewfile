@@ -1,7 +1,5 @@
 tap "charmbracelet/tap"
 tap "homebrew/brew-vulns"
-tap "olaproeis/ferrite"
-brew "age"
 brew "atuin"
 brew "bat"
 brew "bottom"
@@ -46,7 +44,6 @@ cask "amneziavpn"
 cask "chatgpt"
 cask "claude"
 cask "claude-code"
-cask "olaproeis/ferrite/ferrite", trusted: true
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
@@ -56,5 +53,4 @@ cask "raycast"
 cask "zed"
 cask "zen"
 mas "Better Resource Monitor", id: 6758237306
-mas "Perplexity", id: 6714467650
 mas "Telegram", id: 747648890

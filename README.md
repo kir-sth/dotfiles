@@ -10,17 +10,17 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                                           |
-| ---------------- | --------------------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, rbw, OrbStack, bumblebee              |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)              |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                        |
-| CLI Extras       | age, dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                         |
-| Dev Tools        | mise, uv, bun, cargo, go, gh, just, task                        |
-| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv        |
-| AI               | Claude Code, Crush, Claude Desktop, ChatGPT, Perplexity         |
-| Apps             | Zen, Ferrite, Figma, IINA, Raycast, Better Resource Monitor     |
+| Category         | Tools                                                      |
+| ---------------- | ---------------------------------------------------------- |
+| System           | chezmoi, mole, syncthing, rbw, OrbStack, bumblebee         |
+| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)         |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                   |
+| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
+| Editor / IDE     | Neovim (AstroNvim), Zed                                    |
+| Dev Tools        | mise, uv, bun, cargo, go, gh, just, task                   |
+| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv   |
+| AI               | Claude Code, Crush, Claude Desktop, ChatGPT                |
+| Apps             | Zen, Figma, IINA, Raycast, Better Resource Monitor         |
 
 ## Structure
 
