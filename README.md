@@ -13,7 +13,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Category         | Tools                                                      |
 | ---------------- | ---------------------------------------------------------- |
 | System           | chezmoi, mole, syncthing, rbw, OrbStack, bumblebee         |
-| Terminal & Shell | Ghostty, tmux, zsh (sheldon, starship, fzf, atuin)         |
+| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)       |
 | CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                   |
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
 | Editor / IDE     | Neovim (AstroNvim), Zed                                    |
@@ -40,8 +40,8 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 ├── nvim                        # AstroNvim
 ├── sheldon                     # plugin definitions
 ├── starship                    # shell prompt
-├── tmux                        # terminal multiplexer
 ├── yazi                        # file manager
+├── zellij                      # terminal multiplexer
 └── zsh/
     ├── conf.d/
     │   ├── aliases.zsh         # aliases
@@ -110,10 +110,6 @@ gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
 lock         # dump brew state and track Brewfile and mise.toml in chezmoi
 check        # run security checks
-
-# misc
-getmd        # fetch a URL as markdown via Cloudflare browser rendering
-y            # open yazi and change shell directory on exit
 ```
 
 ## Updating dotfiles

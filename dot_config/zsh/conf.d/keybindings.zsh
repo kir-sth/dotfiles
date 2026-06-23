@@ -1,7 +1,16 @@
-bindkey '^r' atuin-search # Ctrl+R - atuin global search
-bindkey '^[[A' atuin-up-search # ↑ normal mode - atuin directory search
-bindkey '^[OA' atuin-up-search # ↑ application mode - atuin directory search in tmux/ssh
+# ATUIN
+bindkey '^r'   atuin-search     # Ctrl+R — global history search
+bindkey '^[[A' atuin-up-search  # Up (normal cursor mode) — search current directory
+bindkey '^[OA' atuin-up-search  # Up (application cursor mode) — Zellij / SSH
 
-bindkey '^U' backward-kill-line # Cmd+Delete - delete from cursor to start of line
-bindkey '^[[3;3~' kill-word # Fn+Option+Delete - delete from cursor to end of word
-bindkey '^[[3;9~' kill-line # Fn+Cmd+Delete - delete from cursor to end of line
+# NAVIGATION (explicit bindings for Zellij locked mode / Zed / SSH)
+bindkey '^A'  beginning-of-line  # Cmd+Left — beginning of line
+bindkey '^E'  end-of-line        # Cmd+Right — end of line
+bindkey '^[b' backward-word      # Option+Left  (ESC+b) — word left
+bindkey '^[f' forward-word       # Option+Right (ESC+f) — word right
+
+# DELETION
+bindkey '^U'      backward-kill-line  # Cmd+Delete — delete to beginning of line
+bindkey '^[^?'    backward-kill-word  # Option+Backspace — delete word left
+bindkey '^[[3;3~' kill-word           # Fn+Option+Delete — delete word right
+bindkey '^[[3;9~' kill-line           # Fn+Cmd+Delete — delete to end of line

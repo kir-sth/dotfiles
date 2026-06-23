@@ -32,8 +32,8 @@ brew "sheldon"
 brew "starship"
 brew "syncthing", restart_service: :changed
 brew "tlrc"
-brew "tmux"
 brew "yazi"
+brew "zellij"
 brew "zoxide"
 brew "charmbracelet/tap/crush", trusted: true
 brew "charmbracelet/tap/freeze", trusted: true

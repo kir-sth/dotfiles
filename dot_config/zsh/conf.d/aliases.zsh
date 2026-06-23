@@ -14,6 +14,12 @@ alias du="dust -r"
 alias jq="jaq"
 alias jnv="jnv --config $XDG_CONFIG_HOME/jnv/config.toml"
 
+# ZELLIJ
+alias z="zellij"
+alias za="zellij attach"
+alias zl="zellij list-sessions"
+alias zka="zellij kill-all-sessions --yes"
+
 # MISC
 alias alert="osascript -e 'display notification \"Done!\" with title \"Terminal\" sound name \"Crystal\"'"
 alias -g -- --help="--help 2>&1 | bat -l help -p"
