@@ -29,6 +29,8 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 
 # XDG CACHE
 export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
+export GOCACHE="$XDG_CACHE_HOME/go/build"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export SCCACHE_DIR="$XDG_CACHE_HOME/mise/sccache"
 export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
