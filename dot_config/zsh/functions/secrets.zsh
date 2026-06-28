@@ -16,5 +16,8 @@ mise() {
 
 crush() {
   rbw unlocked &>/dev/null || rbw unlock || return 1
-  ZAI_API_KEY=$(rbw get "api-zai") command crush "$@"
+  HYPER_API_KEY=$(rbw get "api-hyper") \
+  OPENROUTER_API_KEY=$(rbw get "api-openrouter") \
+  ZAI_API_KEY=$(rbw get "api-zai") \
+  command crush "$@"
 }
