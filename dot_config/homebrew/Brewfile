@@ -43,7 +43,6 @@ brew "homebrew/brew-vulns/brew-vulns", trusted: true
 cask "amneziavpn"
 cask "chatgpt"
 cask "claude"
-cask "claude-code"
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"

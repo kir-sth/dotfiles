@@ -9,7 +9,5 @@ README.md
 
 .config/yazi/flavors
 
-.config/zsh/local.zsh
-
 .config/homebrew/trust.json
 .config/homebrew/trust.json.lock
