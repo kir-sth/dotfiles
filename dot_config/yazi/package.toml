@@ -2,6 +2,6 @@
 deps = []
 
 [[flavor.deps]]
-use = "malick-tammal/monokai"
-rev = "57be034"
-hash = "9fbb5104646853a933446746b88118a6"
+use = "kalidyasin/yazi-flavors:tokyonight-storm"
+rev = "70fe6b4"
+hash = "5e3e7bacbda43a1816d1e8be53a3599e"

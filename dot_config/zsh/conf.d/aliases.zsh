@@ -13,6 +13,7 @@ alias ps="procs"
 alias du="dust -r"
 alias jq="jaq"
 alias jnv="jnv --config $XDG_CONFIG_HOME/jnv/config.toml"
+alias freeze="freeze --config user"
 
 # ZELLIJ
 alias z="zellij"

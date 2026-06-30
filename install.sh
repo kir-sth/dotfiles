@@ -78,7 +78,18 @@ step "Yazi packages"
 ya pkg install
 ok "Installed"
 
-# ── 9. Sheldon plugins ───────────────────────────────────────────────────────
+# ── 9. bat / delta theme ─────────────────────────────────────────────────────
+step "bat / delta theme (Tokyo Night Storm)"
+BAT_THEME_DIR="$(bat --config-dir)/themes"
+mkdir -p "$BAT_THEME_DIR"
+if [[ ! -f "$BAT_THEME_DIR/tokyonight_storm.tmTheme" ]]; then
+  curl -fsSL -o "$BAT_THEME_DIR/tokyonight_storm.tmTheme" \
+    https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_storm.tmTheme
+fi
+bat cache --build
+ok "Installed"
+
+# ── 10. Sheldon plugins ──────────────────────────────────────────────────────
 step "Sheldon plugins"
 sheldon lock
 ok "Locked"

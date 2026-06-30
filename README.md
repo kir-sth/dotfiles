@@ -82,7 +82,8 @@ curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | 
 6. Installs packages and applications from Brewfile
 7. Installs mise tools
 8. Installs yazi packages and themes
-9. Locks sheldon plugins
+9. Installs and builds bat / delta theme
+10. Locks sheldon plugins
 
 ## Post-install
 

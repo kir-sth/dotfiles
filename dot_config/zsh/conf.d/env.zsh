@@ -47,7 +47,7 @@ export MOOR="--statusbar=bold --follow"
 
 # BAT
 export BAT_PAGER="moor"
-export BAT_THEME="Monokai Extended"
+export BAT_THEME="tokyonight_storm"
 export BAT_STYLE="numbers,changes,header"
 export BAT_PAGING="never"
 

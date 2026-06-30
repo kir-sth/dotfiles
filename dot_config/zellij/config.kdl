@@ -5,24 +5,7 @@
 // Ctrl+Space — switches to normal mode
 // Esc / Ctrl+Space — returns to locked mode
 
-themes {
-  monokai-pro {
-    fg "#fcfcfa"
-    bg "#2d2a2e"
-
-    black "#403e41"
-    red "#ff6188"
-    green "#a9dc76"
-    yellow "#ffd866"
-    blue "#fc9867"
-    magenta "#ab9df2"
-    cyan "#78dce8"
-    white "#fcfcfa"
-    orange "#fc9867"
-  }
-}
-
-theme "monokai-pro"
+theme "tokyo-night-storm"
 
 default_shell "zsh"
 default_mode "locked"

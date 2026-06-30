@@ -6,7 +6,7 @@ no_hint = false
 edit_mode = "Insert"
 word_break_chars = [".", "|", "(", ")", "[", "]"]
 prefix = "❯ "
-prefix_style = "fg=#A6E22E,attr=bold"
+prefix_style = "fg=#9ece6a,attr=bold"
 active_char_style = "attr=reverse"
 inactive_char_style = ""
 
@@ -14,7 +14,7 @@ inactive_char_style = ""
 
 [editor.on_defocus]
 prefix = "· "
-prefix_style = "fg=#75715E"
+prefix_style = "fg=#565f89"
 active_char_style = "attr=dim"
 inactive_char_style = "attr=dim"
 
@@ -25,13 +25,13 @@ max_streams = 1000
 
 [json.stream]
 indent = 2
-curly_brackets_style = "fg=#F8F8F2,attr=bold"
-square_brackets_style = "fg=#F8F8F2,attr=bold"
-key_style = "fg=#66D9EF"
-string_value_style = "fg=#E6DB74"
-number_value_style = "fg=#AE81FF"
-boolean_value_style = "fg=#F92672"
-null_value_style = "fg=#75715E,attr=dim"
+curly_brackets_style = "fg=#c0caf5,attr=bold"
+square_brackets_style = "fg=#c0caf5,attr=bold"
+key_style = "fg=#7dcfff"
+string_value_style = "fg=#e0af68"
+number_value_style = "fg=#bb9af7"
+boolean_value_style = "fg=#f7768e"
+null_value_style = "fg=#565f89,attr=dim"
 active_item_attribute = "bold"
 inactive_item_attribute = "dim"
 overflow_mode = "Wrap"
@@ -45,8 +45,8 @@ search_load_chunk_size = 50000
 [completion.listbox]
 lines = 5
 cursor = "❯ "
-active_item_style = "fg=#272822,bg=#66D9EF"
-inactive_item_style = "fg=#75715E"
+active_item_style = "fg=#1a1b26,bg=#7dcfff"
+inactive_item_style = "fg=#565f89"
 
 # Keybinds (global)
 

@@ -1,9 +1,9 @@
-theme = Monokai Pro
+theme = "TokyoNight Storm"
 
 auto-update = download
 auto-update-channel = stable
 
-background-opacity = 0.70
+background-opacity = 0.80
 background-blur-radius = 20
 
 cursor-style = block
