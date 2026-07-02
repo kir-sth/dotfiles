@@ -1,9 +1,4 @@
-# CONFIGS
-alias brewfile="bat -pp -l ruby $HOMEBREW_BUNDLE_FILE"
-alias misefile="bat -pp $XDG_CONFIG_HOME/mise/mise.toml"
-alias configs="(cd $XDG_DATA_HOME && nvim chezmoi) && chezmoi apply"
-
-# MODERN CLI
+# MODERN CLI TOOL REPLACEMENTS
 alias vim="nvim"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza -lah --icons --group-directories-first --git"
@@ -15,12 +10,6 @@ alias jq="jaq"
 alias jnv="jnv --config $XDG_CONFIG_HOME/jnv/config.toml"
 alias freeze="freeze --config user"
 
-# ZELLIJ
-alias z="zellij"
-alias za="zellij attach"
-alias zl="zellij list-sessions"
-alias zka="zellij kill-all-sessions --yes"
-
-# MISC
+# SHELL UX
 alias alert="osascript -e 'display notification \"Done!\" with title \"Terminal\" sound name \"Crystal\"'"
 alias -g -- --help="--help 2>&1 | bat -l help -p"

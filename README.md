@@ -43,20 +43,20 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 ├── yazi                        # file manager
 ├── zellij                      # terminal multiplexer
 └── zsh/
-    ├── conf.d/
-    │   ├── aliases.zsh         # aliases
+    ├── core/
     │   ├── env.zsh             # exports
-    │   ├── inits.zsh           # tool inits
-    │   ├── keybindings.zsh     # keyboard shortcuts
     │   ├── options.zsh         # setopt, history
-    │   └── plugins.zsh         # compinit + sheldon
-    ├── functions/
+    │   ├── inits.zsh           # eval tools
+    │   ├── completions.zsh     # zstyle, compinit, zcompile
+    │   └── keybindings.zsh     # keyboard shortcuts
+    ├── modules/
     │   ├── bumblebee.zsh       # supply-chain catalog sync + scan
     │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
-    │   ├── commands.zsh        # interactive workflows
-    │   ├── core.zsh            # shared task-runner helper
+    │   ├── ergonomics.zsh      # modern CLI replacements & shell UX
     │   ├── secrets.zsh         # runtime credential injection wrappers
-    │   └── yazi.zsh            # yazi cd-on-exit wrapper
+    │   ├── system.zsh          # system maintenance tasks
+    │   ├── yazi.zsh            # yazi cd-on-exit wrapper
+    │   └── zellij.zsh          # zellij functions and aliases
     ├── .zshrc                  # entry point
     └── .zprofile               # brew shellenv
 ~/.zshenv                       # ZDOTDIR
@@ -105,7 +105,7 @@ brewfile     # cat Brewfile
 misefile     # cat mise.toml
 configs      # open chezmoi source in nvim + apply
 
-# commands
+# system tasks
 up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes

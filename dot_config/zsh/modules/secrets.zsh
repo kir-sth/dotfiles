@@ -1,3 +1,5 @@
+# wrapper functions shadowing real commands to inject rbw secrets
+
 brew() {
   if rbw unlocked &>/dev/null; then
     GITHUB_TOKEN=$(rbw get "api-github") command brew "$@"
