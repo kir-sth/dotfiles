@@ -26,6 +26,7 @@ export SHELDON_DATA_DIR="$XDG_DATA_HOME/sheldon"
 # XDG STATE
 export FZF_HISTORY_FILE="$XDG_STATE_HOME/fzf/history"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 
 # XDG CACHE
 export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
