@@ -53,3 +53,4 @@ cask "zed"
 cask "zen"
 mas "Better Resource Monitor", id: 6758237306
 mas "Telegram", id: 747648890
+mas "WireGuard", id: 1451685025
