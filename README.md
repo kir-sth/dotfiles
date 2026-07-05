@@ -17,7 +17,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                   |
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
 | Editor / IDE     | Neovim (AstroNvim), Zed                                    |
-| Dev Tools        | mise, uv, bun, cargo, go, gh, just, task                   |
+| Dev Tools        | mise, uv, bun, cargo, go, swift, gh, just, task            |
 | Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv   |
 | AI               | Crush, Claude Desktop, ChatGPT                             |
 | Apps             | Zen, Figma, IINA, Raycast, Better Resource Monitor         |

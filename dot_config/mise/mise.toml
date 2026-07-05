@@ -5,9 +5,10 @@ python = "latest"
 uv = "latest"
 rust = "latest"
 cargo-binstall = "latest"
+swift = "latest"
 
-"cargo:sccache" = { version = "latest" }
 "cargo:ghgrab" = { version = "latest" }
+"cargo:sccache" = { version = "latest" }
 "pipx:sqlit-tui" = { version = "latest", extras = ["ssh"] }
 
 [settings]
@@ -18,7 +19,7 @@ npm.package_manager = "bun"
 pipx.uvx = true
 python.uv_venv_auto = "source"
 status.show_tools = true
-idiomatic_version_file_enable_tools = ["rust", "python", "bun", "go"]
+idiomatic_version_file_enable_tools = ["bun", "go", "python", "rust", "swift"]
 
 [env]
 PIP_REQUIRE_VIRTUALENV = "true"
