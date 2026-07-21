@@ -1,5 +1,4 @@
 tap "charmbracelet/tap"
-tap "homebrew/brew-vulns"
 brew "atuin"
 brew "bat"
 brew "bottom"
@@ -39,7 +38,6 @@ brew "charmbracelet/tap/crush", trusted: true
 brew "charmbracelet/tap/freeze", trusted: true
 brew "charmbracelet/tap/glow", trusted: true
 brew "charmbracelet/tap/gum", trusted: true
-brew "homebrew/brew-vulns/brew-vulns", trusted: true
 cask "amneziavpn"
 cask "chatgpt"
 cask "claude"
