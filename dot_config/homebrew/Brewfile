@@ -39,7 +39,6 @@ brew "charmbracelet/tap/freeze", trusted: true
 brew "charmbracelet/tap/glow", trusted: true
 brew "charmbracelet/tap/gum", trusted: true
 cask "amneziavpn"
-cask "chatgpt"
 cask "claude"
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"

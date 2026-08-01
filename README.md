@@ -19,7 +19,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Editor / IDE     | Neovim (AstroNvim), Zed                                    |
 | Dev Tools        | mise, uv, bun, cargo, go, swift, gh, just, task            |
 | Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv   |
-| AI               | Crush, Claude Desktop, ChatGPT                             |
+| AI               | Crush, Claude Desktop                                      |
 | Apps             | Zen, Figma, IINA, Raycast, Better Resource Monitor         |
 
 ## Structure
