@@ -29,7 +29,6 @@ brew "ripgrep"
 brew "sevenzip"
 brew "sheldon"
 brew "starship"
-brew "syncthing", restart_service: :changed
 brew "tlrc"
 brew "yazi"
 brew "zellij"

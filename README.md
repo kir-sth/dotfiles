@@ -12,7 +12,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 | Category         | Tools                                                      |
 | ---------------- | ---------------------------------------------------------- |
-| System           | chezmoi, mole, syncthing, rbw, OrbStack, bumblebee         |
+| System           | chezmoi, mole, rbw, OrbStack, bumblebee                    |
 | Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)       |
 | CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                   |
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
