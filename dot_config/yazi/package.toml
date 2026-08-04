@@ -1,7 +1,9 @@
 [plugin]
-deps = []
+deps = [
+  { use = "ndtoan96/ouch", rev = "406ce6c", hash = "f5afc904d5106ee368c8aa2ded43bd74" }
+]
 
-[[flavor.deps]]
-use = "kalidyasin/yazi-flavors:tokyonight-storm"
-rev = "70fe6b4"
-hash = "5e3e7bacbda43a1816d1e8be53a3599e"
+[flavor]
+deps = [
+  { use = "kalidyasin/yazi-flavors:tokyonight-storm", rev = "70fe6b4", hash = "5e3e7bacbda43a1816d1e8be53a3599e" }
+]

@@ -10,17 +10,17 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                                      |
-| ---------------- | ---------------------------------------------------------- |
-| System           | chezmoi, mole, rbw, OrbStack, bumblebee                    |
-| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)       |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                   |
-| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, sevenzip, delta, freeze |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                    |
-| Dev Tools        | mise, uv, bun, cargo, go, swift, gh, just, task            |
-| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv   |
-| AI               | Crush, Claude Desktop                                      |
-| Apps             | Zen, Figma, IINA, Raycast, Better Resource Monitor         |
+| Category         | Tools                                                    |
+| ---------------- | -------------------------------------------------------- |
+| System           | chezmoi, mole, rbw, OrbStack, bumblebee                  |
+| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)     |
+| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                 |
+| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, ouch, delta, freeze   |
+| Editor / IDE     | Neovim (AstroNvim), Zed                                  |
+| Dev Tools        | mise, uv, bun, cargo, go, swift, gh, just, task          |
+| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv |
+| AI               | Crush, Claude Desktop                                    |
+| Apps             | Zen, Figma, IINA, Raycast, Better Resource Monitor       |
 
 ## Structure
 
