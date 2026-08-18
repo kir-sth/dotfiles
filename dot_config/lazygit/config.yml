@@ -29,40 +29,30 @@ gui:
     searchingActiveBorderColor:
       - "#e0af68"
       - bold
-
 git:
   overrideGpg: true
-
   branchLogCmd: >
-    git log --graph --color=always --abbrev-commit
-    --decorate --date=relative --pretty=medium
-    {{branchName}} --
+    git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --
 
-  pagers:
-    - pager: delta --paging=never
+  diffRenderers:
+    - command: delta --paging=never
       colorArg: always
-
-    - pager: delta --paging=never --side-by-side
+    - command: delta --paging=never --side-by-side
       colorArg: always
-
   merging:
     manualCommit: false
-
 update:
   method: never
-
 os:
   editPreset: nvim
-
 customCommands:
   - key: "P"
     context: "localBranches"
     description: "Force push with lease"
     command: >
-      git push --force-with-lease origin
-      {{.SelectedLocalBranch.Name}}
-    loadingText: "Force pushing..."
+      git push --force-with-lease origin {{.SelectedLocalBranch.Name}}
 
+    loadingText: "Force pushing..."
   - key: "R"
     context: "commits"
     description: "Interactive rebase from this commit"
@@ -72,9 +62,9 @@ customCommands:
         body: "Start rebase from selected commit?"
     command: >
       git rebase -i {{.SelectedCommit.Sha}}^
+
     output: terminal
     loadingText: "Rebasing..."
-
   - key: "O"
     context: "files"
     description: "Open remote repository"
@@ -85,6 +75,4 @@ customCommands:
     context: "localBranches"
     description: "Delete merged branches"
     command: >
-      git branch --merged main |
-      grep -vE '(^\*|main|master)' |
-      xargs -r git branch -d
+      git branch --merged main | grep -vE '(^\*|main|master)' | xargs -r git branch -d
