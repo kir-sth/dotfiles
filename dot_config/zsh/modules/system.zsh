@@ -1,6 +1,6 @@
 # DOTFILES SHORTCUTS
-alias brewfile="bat -pp -l ruby $HOMEBREW_BUNDLE_FILE"
-alias misefile="bat -pp $XDG_CONFIG_HOME/mise/mise.toml"
+alias brewfile="bat -l ruby $HOMEBREW_BUNDLE_FILE"
+alias misefiles="bat "$XDG_CONFIG_HOME"/mise/config.toml "$XDG_CONFIG_HOME"/mise/conf.d/*.toml"
 alias configs="(cd $XDG_DATA_HOME && nvim chezmoi) && chezmoi apply"
 
 # TASK RUNNER
@@ -58,7 +58,7 @@ lock() {
   local -a tasks=(
     "brew bundle dump --force"
     "chezmoi add \"$XDG_CONFIG_HOME/homebrew/Brewfile\""
-    "chezmoi add \"$XDG_CONFIG_HOME/mise/mise.toml\""
+    "chezmoi add \"$XDG_CONFIG_HOME/mise\""
   )
   system::run_tasks "${tasks[@]}"
 }

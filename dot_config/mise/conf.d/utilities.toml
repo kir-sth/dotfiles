@@ -1,0 +1,5 @@
+[tools]
+cargo-binstall = "latest"
+"cargo:ghgrab" = "latest"
+"cargo:sccache" = "latest"
+"pipx:sqlit-tui" = "latest"

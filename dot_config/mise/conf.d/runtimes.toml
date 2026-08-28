@@ -1,0 +1,11 @@
+[tools]
+bun = "latest"
+go = "latest"
+python = "latest"
+swift = "latest"
+uv = "latest"
+
+[tools.rust]
+version = "stable"
+profile = "default"
+components = ["rust-src", "rust-analyzer"]

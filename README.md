@@ -10,56 +10,49 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                                    |
-| ---------------- | -------------------------------------------------------- |
-| System           | chezmoi, mole, rbw, OrbStack, bumblebee                  |
-| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)     |
-| CLI Essentials   | zoxide, bat, eza, fd, ripgrep, jaq, moor                 |
-| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, ouch, delta, freeze   |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                  |
-| Dev Tools        | mise, uv, bun, cargo, go, swift, gh, just, task          |
-| Dev TUI          | yazi, code2prompt, lazygit, sqlit-tui, ghgrab, glow, jnv |
-| AI               | Crush, Claude Desktop                                    |
-| Apps             | Zen, Figma, IINA, Raycast, Better Resource Monitor       |
+| Category         | Tools                                                        |
+| ---------------- | ------------------------------------------------------------ |
+| System           | chezmoi, mole, rbw, OrbStack, bumblebee                      |
+| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)         |
+| CLI Essentials   | yazi, zoxide, bat, eza, fd, ripgrep, jaq, moor               |
+| CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, ouch, delta, freeze, gum  |
+| Editor / IDE     | Neovim (AstroNvim), Zed                                      |
+| Dev Runtimes     | mise, Bun, Python, Go, Rust, Swift                           |
+| Dev Tools        | lazygit, sqlit-tui                                           |
+| Dev Extra        | gh, just, task, ghgrab, glow, jnv                            |
+| AI               | code2prompt, Crush, Claude Desktop                           |
+| Apps             | Zen, Figma, IINA, Raycast, Telegram, Better Resource Monitor |
+
+## Configuration
+
+The shell, dev tooling, and editor are the most involved pieces and are documented separately:
+
+- **[zsh](dot_config/zsh/README.md)** — shell entry point, CLI tool integration, aliases and functions
+- **[mise](dot_config/mise/README.md)** — dev runtimes, plus LSPs/formatters/linters per language
+- **[nvim](dot_config/nvim/README.md)** — AstroNvim setup, language support, plugins
 
 ## Structure
 
 ```zsh
 ~/.config/
-├── atuin                       # shell history sync
-├── bottom                      # system monitor
-├── freeze                      # code screenshot tool
-├── ghostty                     # terminal emulator settings
-├── git                         # git config
-├── glow                        # markdown reader
-├── homebrew                    # brew bundle and env
-├── jnv                         # interactive json viewer
-├── lazygit                     # terminal UI for git commands
-├── mise                        # dev tools manager
-├── mole                        # cleaner whitelist
-├── nvim                        # AstroNvim
-├── sheldon                     # plugin definitions
-├── starship                    # shell prompt
-├── yazi                        # file manager
-├── zellij                      # terminal multiplexer
-└── zsh/
-    ├── core/
-    │   ├── env.zsh             # exports
-    │   ├── options.zsh         # setopt, history
-    │   ├── inits.zsh           # eval tools
-    │   ├── completions.zsh     # zstyle, compinit, zcompile
-    │   └── keybindings.zsh     # keyboard shortcuts
-    ├── modules/
-    │   ├── bumblebee.zsh       # supply-chain catalog sync + scan
-    │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
-    │   ├── ergonomics.zsh      # modern CLI replacements & shell UX
-    │   ├── secrets.zsh         # runtime credential injection wrappers
-    │   ├── system.zsh          # system maintenance tasks
-    │   ├── yazi.zsh            # yazi cd-on-exit wrapper
-    │   └── zellij.zsh          # zellij functions and aliases
-    ├── .zshrc                  # entry point
-    └── .zprofile               # brew shellenv
-~/.zshenv                       # ZDOTDIR
+├── atuin         # shell history sync
+├── bottom        # system monitor
+├── freeze        # code screenshot tool
+├── ghostty       # terminal emulator settings
+├── git           # git config
+├── glow          # markdown reader
+├── homebrew      # brew bundle and env
+├── jnv           # interactive json viewer
+├── lazygit       # terminal UI for git commands
+├── mise          # dev tools manager
+├── mole          # cleaner whitelist
+├── nvim          # AstroNvim
+├── sheldon       # plugin definitions
+├── starship      # shell prompt
+├── yazi          # file manager
+├── zellij        # terminal multiplexer
+└── zsh           # zsh config
+~/.zshenv         # ZDOTDIR
 ```
 
 ## Install
@@ -102,14 +95,14 @@ nvim
 ```bash
 # config shortcuts
 brewfile     # cat Brewfile
-misefile     # cat mise.toml
-configs      # open chezmoi source in nvim + apply
+misefiles    # cat mise configs
+configs      # open chezmoi source in nvim, then apply
 
 # system tasks
 up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
-lock         # dump brew state and track Brewfile and mise.toml in chezmoi
+lock         # dump brew state and track Brewfile and mise configs in chezmoi
 check        # run security checks
 ```
 
