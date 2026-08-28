@@ -9,10 +9,8 @@
 
 # apps
 ~/Library/Application Support/Claude
-~/Library/Application Support/com.openai.chat
 ~/Library/Application Support/com.raycast.macos
 ~/Library/Application Support/com.raycast.shared
-~/Library/Application Support/Syncthing
 ~/Library/Application Support/Zed
 
 # config
@@ -37,4 +35,3 @@
 ~/.cache/pytest
 ~/.cache/sheldon
 ~/.cache/uv
-
