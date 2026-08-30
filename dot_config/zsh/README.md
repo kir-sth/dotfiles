@@ -32,7 +32,7 @@ Interactive shell config and the entry point for most of the CLI tooling in this
 # config shortcuts
 brewfile     # cat Brewfile
 misefiles    # cat mise configs
-configs      # open chezmoi source in nvim, then apply
+configs      # open chezmoi source in editor, then apply
 
 # system maintenance
 up           # update Homebrew packages, apps, and mise tools
@@ -47,7 +47,8 @@ y            # change directory after exit
 # zellij
 z            # new session
 zl           # session list
-zka          # kill all sessions
-zda          # delete all sessions
-za           # pick and attach a zellij session
+za           # pick and attach a session
+zk / zd      # pick and kill / delete a session
+zka / zda    # kill / delete all sessions
+zy           # yazi and zsh session template
 ```

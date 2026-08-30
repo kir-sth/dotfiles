@@ -1,0 +1,178 @@
+# Language servers managed by mise
+
+[language-server]
+typos = { command = "typos-lsp" }
+kdl-lsp = { command = "kdl-lsp" }
+sqruff = { command = "sqruff", args = ["lsp"] }
+
+[language-server.bash-language-server.config]
+shellcheckPath = "shellcheck"
+shfmt = { path = "shfmt" }
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+# bash
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server", "typos"]
+auto-format = true
+
+# Python
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "ty", "typos"]
+auto-format = true
+# code-actions-on-save = ["source.fixAll.ruff"]
+
+# JavaScript / TypeScript
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+# JSON / HTML / CSS
+
+[[language]]
+name = "json"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+[[language]]
+name = "jsonc"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+[[language]]
+name = "html"
+language-servers = [
+  { name = "vscode-html-language-server", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+[[language]]
+name = "css"
+language-servers = [
+  { name = "vscode-css-language-server", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+auto-format = true
+
+# Markdown
+
+[[language]]
+name = "markdown"
+language-servers = ["rumdl", "typos"]
+auto-format = true
+
+# Go
+
+[[language]]
+name = "go"
+language-servers = ["gopls", "golangci-lint-lsp", "typos"]
+auto-format = true
+# code-actions-on-save = ["source.organizeImports"]
+
+# Rust
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "typos"]
+auto-format = true
+
+# Swift
+
+[[language]]
+name = "swift"
+language-servers = ["sourcekit-lsp", "typos"]
+auto-format = true
+
+# SQL
+
+[[language]]
+name = "sql"
+language-servers = ["sqruff", "typos"]
+formatter = { command = "sqruff", args = ["fix", "-"] }
+auto-format = true
+
+# TOML
+
+[[language]]
+name = "toml"
+language-servers = ["tombi", "typos"]
+auto-format = true
+
+# YAML
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server", "typos"]
+formatter = { command = "yamlfmt", args = ["-"] }
+auto-format = true
+
+# KDL
+
+[[language]]
+name = "kdl"
+language-servers = ["kdl-lsp", "typos"]
+formatter = { command = "kdlfmt", args = ["format", "-"] }
+auto-format = true
+
+# Docker
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-language-server", "typos"]
+formatter = { command = "dockerfmt" }
+auto-format = true
+
+# Just
+
+[[language]]
+name = "just"
+language-servers = ["just-lsp", "typos"]

@@ -1,5 +1,6 @@
 # MODERN CLI TOOL REPLACEMENTS
-alias vim="nvim"
+alias vi="hx"
+alias vim="hx"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza -lah --icons --group-directories-first --git"
 alias tree="eza --tree -lah --icons --level=3 --git --git-ignore"

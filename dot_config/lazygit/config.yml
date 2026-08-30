@@ -44,7 +44,7 @@ git:
 update:
   method: never
 os:
-  editPreset: nvim
+  editPreset: helix
 customCommands:
   - key: "P"
     context: "localBranches"

@@ -16,7 +16,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)         |
 | CLI Essentials   | yazi, zoxide, bat, eza, fd, ripgrep, jaq, moor               |
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, ouch, delta, freeze, gum  |
-| Editor / IDE     | Neovim (AstroNvim), Zed                                      |
+| Editor / IDE     | Helix, Zed                                                   |
 | Dev Runtimes     | mise, Bun, Python, Go, Rust, Swift                           |
 | Dev Tools        | lazygit, sqlit-tui                                           |
 | Dev Extra        | gh, just, task, ghgrab, glow, jnv                            |
@@ -25,28 +25,29 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Configuration
 
-The shell, dev tooling, and editor are the most involved pieces and are documented separately:
+The shell, dev tooling, and editor are documented separately:
 
-- **[zsh](dot_config/zsh/README.md)** — shell entry point, CLI tool integration, aliases and functions
-- **[mise](dot_config/mise/README.md)** — dev runtimes, plus LSPs/formatters/linters per language
-- **[nvim](dot_config/nvim/README.md)** — AstroNvim setup, language support, plugins
+- **[zsh](dot_config/zsh/README.md)** — shell entry point, aliases and functions
+- **[mise](dot_config/mise/README.md)** — LSPs/formatters/linters per language
+- **[helix](dot_config/helix/README.md)** — helix settings and language support
 
 ## Structure
 
 ```zsh
 ~/.config/
 ├── atuin         # shell history sync
+├── bat           # bat theme
 ├── bottom        # system monitor
 ├── freeze        # code screenshot tool
 ├── ghostty       # terminal emulator settings
-├── git           # git config
+├── git           # git config and ignore
 ├── glow          # markdown reader
+├── helix         # editor
 ├── homebrew      # brew bundle and env
 ├── jnv           # interactive json viewer
 ├── lazygit       # terminal UI for git commands
 ├── mise          # dev tools manager
 ├── mole          # cleaner whitelist
-├── nvim          # AstroNvim
 ├── sheldon       # plugin definitions
 ├── starship      # shell prompt
 ├── yazi          # file manager
@@ -75,20 +76,8 @@ curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | 
 6. Installs packages and applications from Brewfile
 7. Installs mise tools
 8. Installs yazi packages and themes
-9. Installs and builds bat / delta theme
+9. Builds bat theme cache
 10. Locks sheldon plugins
-
-## Post-install
-
-```bash
-# Bitwarden
-rbw config set email <your-email>
-rbw register
-
-# Neovim plugins
-nvim
-# :AstroUpdate — update AstroNvim framework + Lazy plugins + Mason tools
-```
 
 ## Usage
 
@@ -96,13 +85,13 @@ nvim
 # config shortcuts
 brewfile     # cat Brewfile
 misefiles    # cat mise configs
-configs      # open chezmoi source in nvim, then apply
+configs      # open chezmoi source in editor, then apply
 
 # system tasks
 up           # update Homebrew packages, apps, and mise tools
 gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
-lock         # dump brew state and track Brewfile and mise configs in chezmoi
+lock         # dump brew state, track Brewfile and mise configs in chezmoi
 check        # run security checks
 ```
 

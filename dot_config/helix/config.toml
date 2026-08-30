@@ -1,0 +1,21 @@
+theme = "tokyonight_storm"
+
+[editor]
+auto-format = true
+line-number = "relative"
+bufferline = "multiple"
+shell = ["zsh", "-c"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = false
+
+[editor.soft-wrap]
+enable = false
+
+[editor.file-picker]
+hidden = true

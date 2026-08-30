@@ -24,13 +24,11 @@
 ~/.local/share/chezmoi
 ~/.local/share/crush
 ~/.local/share/mise
-~/.local/share/nvim
 ~/.local/share/orbstack
 ~/.local/share/sheldon
 
 # cache
 ~/.cache/mise
-~/.cache/nvim
 ~/.cache/pre-commit
 ~/.cache/pytest
 ~/.cache/sheldon

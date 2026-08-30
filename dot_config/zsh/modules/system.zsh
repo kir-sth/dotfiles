@@ -1,7 +1,7 @@
 # DOTFILES SHORTCUTS
 alias brewfile="bat -l ruby $HOMEBREW_BUNDLE_FILE"
 alias misefiles="bat "$XDG_CONFIG_HOME"/mise/config.toml "$XDG_CONFIG_HOME"/mise/conf.d/*.toml"
-alias configs="(cd $XDG_DATA_HOME && nvim chezmoi) && chezmoi apply"
+alias configs="(cd $XDG_DATA_HOME && hx chezmoi) && chezmoi apply"
 
 # TASK RUNNER
 system::run_tasks() {

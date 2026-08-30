@@ -37,8 +37,8 @@ export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
 # EDITOR
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="hx"
+export VISUAL="hx"
 export LANG=en_US.UTF-8
 
 # PAGER
