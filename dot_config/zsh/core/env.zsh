@@ -9,18 +9,19 @@ export XDG_RUNTIME_DIR="${TMPDIR%/}"
 export CRUSH_GLOBAL_CONFIG="$XDG_CONFIG_HOME/crush"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
+export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/homebrew/Brewfile"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export SHELDON_CONFIG_DIR="$XDG_CONFIG_HOME/sheldon"
 export SQLIT_CONFIG_DIR="$XDG_CONFIG_HOME/sqlit"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 
 # XDG DATA
+export BUN_INSTALL="$XDG_DATA_HOME/bun"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOPATH="$XDG_DATA_HOME/go"
 export IPYTHONDIR="$XDG_DATA_HOME/ipython"
 export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
-export BUN_INSTALL="$XDG_DATA_HOME/mise/bun"
-export CARGO_HOME="$XDG_DATA_HOME/mise/cargo"
-export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/homebrew/Brewfile"
-export RUSTUP_HOME="$XDG_DATA_HOME/mise/rustup"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export SHELDON_DATA_DIR="$XDG_DATA_HOME/sheldon"
 
 # XDG STATE
@@ -29,11 +30,11 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 
 # XDG CACHE
-export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/mise/bun"
+export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/bun"
 export GOCACHE="$XDG_CACHE_HOME/go/build"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
-export SCCACHE_DIR="$XDG_CACHE_HOME/mise/sccache"
-export UV_CACHE_DIR="$XDG_CACHE_HOME/mise/uv"
+export SCCACHE_DIR="$XDG_CACHE_HOME/sccache"
+export UV_CACHE_DIR="$XDG_CACHE_HOME/uv"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
 # EDITOR
