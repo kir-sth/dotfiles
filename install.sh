@@ -78,14 +78,8 @@ step "Yazi packages"
 ya pkg install
 ok "Installed"
 
-# ── 9. bat / delta theme ─────────────────────────────────────────────────────
-step "bat / delta theme (Tokyo Night Storm)"
-BAT_THEME_DIR="$(bat --config-dir)/themes"
-mkdir -p "$BAT_THEME_DIR"
-if [[ ! -f "$BAT_THEME_DIR/tokyonight_storm.tmTheme" ]]; then
-  curl -fsSL -o "$BAT_THEME_DIR/tokyonight_storm.tmTheme" \
-    https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_storm.tmTheme
-fi
+# ── 9. bat theme cache ─────────────────────────────────────────────────────
+step "bat theme cache"
 bat cache --build
 ok "Installed"
 
@@ -101,4 +95,3 @@ info ""
 info "Post-install:"
 info "  • rbw config set email <your_email>"
 info "  • rbw register"
-info "  • nvim -> :AstroUpdate"
