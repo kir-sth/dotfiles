@@ -7,38 +7,49 @@
   defaultBranch = main
 
 [core]
-  editor = nvim
+  editor = hx
   pager = delta
   autocrlf = input
   safecrlf = warn
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --features=interactive
 
 [delta]
+  features = decorations
   navigate = true
   dark = true
   line-numbers = true
   syntax-theme = tokyonight_storm
+
+[delta "decorations"]
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
   hunk-header-style = omit
 
 [diff]
-  tool = nvimdiff
+  algorithm = histogram
+  colorMoved = zebra
 
 [merge]
-  tool = nvimdiff
   conflictStyle = zdiff3
+  tool = hx
 
 [mergetool]
   keepBackup = false
 
-[mergetool "nvimdiff"]
-  cmd = nvim -d "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+[mergetool "hx"]
+  cmd = hx "$MERGED"
+
+[rerere]
+  enabled = true
 
 [pull]
   rebase = true
+
+[rebase]
+  autoSquash = true
+  updateRefs = true
 
 [fetch]
   prune = true
