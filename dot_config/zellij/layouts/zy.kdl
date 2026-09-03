@@ -2,6 +2,5 @@ layout {
     pane split_direction="horizontal" {
         pane size="80%" command="yazi"
         pane command="zsh"
-        }
     }
 }

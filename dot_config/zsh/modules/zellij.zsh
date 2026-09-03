@@ -20,5 +20,5 @@ zd() { _z_execute_with_picker "delete-session"; }
 
 zy() {
     local target="${1:-.}"
-    zellij --layout code options --default-cwd "$target"
+    zellij --layout zy options --default-cwd "$target"
 }
