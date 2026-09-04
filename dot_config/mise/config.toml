@@ -6,7 +6,7 @@ npm.package_manager = "bun"
 pipx.uvx = true
 python.uv_venv_auto = "source"
 status.show_tools = true
-idiomatic_version_file_enable_tools = ["bun", "go", "python", "rust", "swift"]
+idiomatic_version_file_enable_tools = ["bun", "go", "opentofu", "python", "rust", "swift"]
 
 [env]
 PIP_REQUIRE_VIRTUALENV = "true"

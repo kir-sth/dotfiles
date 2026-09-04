@@ -2,8 +2,8 @@ theme = "tokyonight_storm"
 
 [editor]
 auto-format = true
-line-number = "relative"
 bufferline = "multiple"
+line-number = "relative"
 shell = ["zsh", "-c"]
 
 [editor.cursor-shape]
@@ -11,11 +11,11 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.file-picker]
+hidden = true
+
 [editor.lsp]
 display-inlay-hints = false
 
 [editor.soft-wrap]
 enable = false
-
-[editor.file-picker]
-hidden = true

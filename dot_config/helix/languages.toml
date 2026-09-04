@@ -1,98 +1,56 @@
-# Language servers managed by mise
-
-[language-server]
-typos = { command = "typos-lsp" }
-kdl-lsp = { command = "kdl-lsp" }
-sqruff = { command = "sqruff", args = ["lsp"] }
+# -----------------------------------------------------------------------------
+# Language servers
+# -----------------------------------------------------------------------------
 
 [language-server.bash-language-server.config]
 shellcheckPath = "shellcheck"
-shfmt = { path = "shfmt" }
+shfmt.path = "shfmt"
 
-[language-server.rust-analyzer.config.check]
-command = "clippy"
+[language-server.biome-lsp-proxy]
+command = "biome"
+args = ["lsp-proxy"]
 
-# bash
+[language-server.docker-language-server]
+command = "docker-language-server"
+args = ["start", "--stdio"]
+
+[language-server.kdl-lsp]
+command = "kdl-lsp"
+
+[language-server.rumdl]
+command = "rumdl"
+args = ["server"]
+
+[language-server.rust-analyzer]
+config.check.command = "clippy"
+
+[language-server.sqruff]
+command = "sqruff"
+args = ["lsp"]
+
+[language-server.tofu-ls]
+command = "tofu-ls"
+args = ["serve"]
+
+[language-server.typos]
+command = "typos-lsp"
+
+[language-server.vtsls]
+config."vtsls.autoUseWorkspaceTsdk" = true
+command = "vtsls"
+args = ["--stdio"]
+
+# -----------------------------------------------------------------------------
+# Language
+# -----------------------------------------------------------------------------
+
+# Bash
 
 [[language]]
 name = "bash"
 language-servers = ["bash-language-server", "typos"]
-auto-format = true
 
-# Python
-
-[[language]]
-name = "python"
-language-servers = ["ruff", "ty", "typos"]
-auto-format = true
-# code-actions-on-save = ["source.fixAll.ruff"]
-
-# JavaScript / TypeScript
-
-[[language]]
-name = "javascript"
-language-servers = [
-  { name = "vtsls", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
-
-[[language]]
-name = "typescript"
-language-servers = [
-  { name = "vtsls", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
-
-[[language]]
-name = "jsx"
-language-servers = [
-  { name = "vtsls", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
-
-[[language]]
-name = "tsx"
-language-servers = [
-  { name = "vtsls", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
-
-# JSON / HTML / CSS
-
-[[language]]
-name = "json"
-language-servers = [
-  { name = "vscode-json-language-server", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
-
-[[language]]
-name = "jsonc"
-language-servers = [
-  { name = "vscode-json-language-server", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
-
-[[language]]
-name = "html"
-language-servers = [
-  { name = "vscode-html-language-server", except-features = ["format"] },
-  "biome-lsp-proxy",
-  "typos",
-]
-auto-format = true
+# CSS
 
 [[language]]
 name = "css"
@@ -101,36 +59,119 @@ language-servers = [
   "biome-lsp-proxy",
   "typos",
 ]
-auto-format = true
 
-# Markdown
+# Docker Compose
 
 [[language]]
-name = "markdown"
-language-servers = ["rumdl", "typos"]
-auto-format = true
+name = "docker-compose"
+language-servers = [
+  "yaml-language-server",
+  "docker-language-server",
+  "typos",
+]
+formatter = { command = "yamlfmt", args = ["-"] }
+
+# Dockerfile
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-language-server", "typos"]
+formatter = { command = "dockerfmt" }
 
 # Go
 
 [[language]]
 name = "go"
 language-servers = ["gopls", "golangci-lint-lsp", "typos"]
-auto-format = true
-# code-actions-on-save = ["source.organizeImports"]
+
+# HCL
+
+[[language]]
+name = "hcl"
+file-types = ["tf", "tofu", "hcl", "nomad"]
+language-servers = ["tofu-ls", "typos"]
+formatter = { command = "tofu", args = ["fmt", "-"] }
+
+# HTML
+
+[[language]]
+name = "html"
+language-servers = [
+  "vscode-html-language-server",
+  "biome-lsp-proxy",
+  "typos",
+]
+
+# JavaScript
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+
+# JSON
+
+[[language]]
+name = "json"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+
+# JSONC
+
+[[language]]
+name = "jsonc"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+
+# JSX
+
+[[language]]
+name = "jsx"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+
+# Just
+
+[[language]]
+name = "just"
+language-servers = ["just-lsp", "typos"]
+formatter = { command = "just", args = ["--fmt", "--justfile", "-"] }
+
+# KDL
+
+[[language]]
+name = "kdl"
+language-servers = ["kdl-lsp", "typos"]
+
+# Markdown
+
+[[language]]
+name = "markdown"
+language-servers = ["rumdl", "typos"]
+
+# Python
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "ty", "typos"]
 
 # Rust
 
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer", "typos"]
-auto-format = true
-
-# Swift
-
-[[language]]
-name = "swift"
-language-servers = ["sourcekit-lsp", "typos"]
-auto-format = true
 
 # SQL
 
@@ -138,14 +179,45 @@ auto-format = true
 name = "sql"
 language-servers = ["sqruff", "typos"]
 formatter = { command = "sqruff", args = ["fix", "-"] }
-auto-format = true
+
+# Swift
+
+[[language]]
+name = "swift"
+language-servers = ["sourcekit-lsp", "typos"]
+
+# Terraform variables
+
+[[language]]
+name = "tfvars"
+language-servers = ["tofu-ls", "typos"]
+formatter = { command = "tofu", args = ["fmt", "-"] }
 
 # TOML
 
 [[language]]
 name = "toml"
 language-servers = ["tombi", "typos"]
-auto-format = true
+
+# TSX
+
+[[language]]
+name = "tsx"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
+
+# TypeScript
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "biome-lsp-proxy",
+  "typos",
+]
 
 # YAML
 
@@ -153,26 +225,3 @@ auto-format = true
 name = "yaml"
 language-servers = ["yaml-language-server", "typos"]
 formatter = { command = "yamlfmt", args = ["-"] }
-auto-format = true
-
-# KDL
-
-[[language]]
-name = "kdl"
-language-servers = ["kdl-lsp", "typos"]
-formatter = { command = "kdlfmt", args = ["format", "-"] }
-auto-format = true
-
-# Docker
-
-[[language]]
-name = "dockerfile"
-language-servers = ["docker-language-server", "typos"]
-formatter = { command = "dockerfmt" }
-auto-format = true
-
-# Just
-
-[[language]]
-name = "just"
-language-servers = ["just-lsp", "typos"]

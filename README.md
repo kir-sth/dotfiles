@@ -12,14 +12,14 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 | Category         | Tools                                                        |
 | ---------------- | ------------------------------------------------------------ |
-| System           | chezmoi, mole, rbw, OrbStack, bumblebee                      |
+| System           | chezmoi, mole, rbw, bumblebee                                |
 | Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)         |
 | CLI Essentials   | yazi, zoxide, bat, eza, fd, ripgrep, jaq, moor               |
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, ouch, delta, freeze, gum  |
 | Editor / IDE     | Helix, Zed                                                   |
-| Dev Runtimes     | mise, Bun, Python, Go, Rust, Swift                           |
-| Dev Tools        | lazygit, sqlit-tui                                           |
-| Dev Extra        | gh, just, task, ghgrab, glow, jnv                            |
+| Runtimes         | mise, Bun, Python, Go, Rust, Swift                           |
+| Development      | lazygit, sqlit-tui, gh, just, task, ghgrab, glow, jnv        |
+| Infrastructure   | OpenTofu, OrbStack                                           |
 | AI               | code2prompt, Crush, Claude Desktop                           |
 | Apps             | Zen, Figma, IINA, Raycast, Telegram, Better Resource Monitor |
 
@@ -28,7 +28,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 The shell, dev tooling, and editor are documented separately:
 
 - **[zsh](dot_config/zsh/README.md)** — shell entry point, aliases and functions
-- **[mise](dot_config/mise/README.md)** — LSPs/formatters/linters per language
+- **[mise](dot_config/mise/README.md)** — runtimes, development utilities, and language tooling
 - **[helix](dot_config/helix/README.md)** — helix settings and language support
 
 ## Structure

@@ -1,4 +1,8 @@
 [tools]
+# infrastructure
+opentofu = "latest"
+
+# utilities
 cargo-binstall = "latest"
 "cargo:ghgrab" = "latest"
 "cargo:sccache" = "latest"
