@@ -45,10 +45,9 @@ check        # run security checks
 y            # change directory after exit
 
 # zellij
-z            # new session
+z            # new session (pick layout, optionally set name)
 zl           # session list
 za           # pick and attach a session
 zk / zd      # pick and kill / delete a session
 zka / zda    # kill / delete all sessions
-zy           # yazi and zsh session template
 ```
