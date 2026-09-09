@@ -1,13 +1,13 @@
-{{- $name := promptString "Your GitHub name" -}}
-{{- $email := promptString "Your GitHub email" -}}
-{{- $signingkey := promptString "Path to SSH public key (ex. ~/.ssh/id_ed25519.pub)" -}}
-{{- $allowedSignersFile := promptString "Path to SSH allowed signers file (ex. ~/.ssh/allowed_signers)" -}}
+{{- $name := promptString "Your nickname" -}}
+{{- $email := promptString "Your email" -}}
+{{- $sshGithubPubkey := promptString "GitHub SSH public key" -}}
+{{- $sshSourcecraftPubkey := promptString "SourceCraft SSH public key" -}}
 
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}
-  signingkey = {{ $signingkey | quote }}
-  allowedSignersFile = {{ $allowedSignersFile | quote }}
+  sshGithubPubkey = {{ $sshGithubPubkey | quote }}
+  sshSourcecraftPubkey = {{ $sshSourcecraftPubkey | quote }}
 
 [git]
   autoCommit = false

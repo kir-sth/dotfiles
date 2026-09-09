@@ -31,6 +31,13 @@ The shell, dev tooling, and editor are documented separately:
 - **[mise](dot_config/mise/README.md)** — runtimes, development utilities, and language tooling
 - **[helix](dot_config/helix/README.md)** — helix settings and language support
 
+## SSH keys
+
+Private keys live only in Bitwarden, never on disk. Run `ssh-load`
+to load them into `ssh-agent` via `rbw`. `~/.ssh` holds only public keys,
+client config, and `allowed_signers`. Git identity (auth + commit signing)
+switches automatically between remote hosts via git config.
+
 ## Structure
 
 ```zsh
@@ -40,7 +47,7 @@ The shell, dev tooling, and editor are documented separately:
 ├── bottom        # system monitor
 ├── freeze        # code screenshot tool
 ├── ghostty       # terminal emulator settings
-├── git           # git config and ignore
+├── git           # git ignore and configs
 ├── glow          # markdown reader
 ├── helix         # editor
 ├── homebrew      # brew bundle and env
@@ -52,7 +59,8 @@ The shell, dev tooling, and editor are documented separately:
 ├── starship      # shell prompt
 ├── yazi          # file manager
 ├── zellij        # terminal multiplexer
-└── zsh           # zsh config
+└── zsh           # zsh configs
+~/.ssh/           # SSH client and signing configs
 ~/.zshenv         # ZDOTDIR
 ```
 
@@ -82,7 +90,7 @@ curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | 
 ## Usage
 
 ```bash
-# config shortcuts
+# configs shortcuts
 brewfile     # cat Brewfile
 misefiles    # cat mise configs
 configs      # open chezmoi source in editor, then apply
@@ -93,6 +101,9 @@ gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
 lock         # dump brew state, track Brewfile and mise configs in chezmoi
 check        # run security checks
+
+# ssh
+ssh-load     # unlock Bitwarden and load SSH keys into ssh-agent
 ```
 
 ## Updating dotfiles

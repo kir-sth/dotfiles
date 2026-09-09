@@ -16,7 +16,7 @@ Interactive shell config and the entry point for most of the CLI tooling in this
 │   ├── bumblebee.zsh       # supply-chain catalog sync + scan
 │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
 │   ├── ergonomics.zsh      # modern CLI replacements & shell UX
-│   ├── secrets.zsh         # runtime credential injection wrappers
+│   ├── secrets.zsh         # runtime credential injection wrappers + ssh-agent key loading
 │   ├── system.zsh          # system maintenance tasks
 │   ├── yazi.zsh            # yazi cd-on-exit wrapper
 │   └── zellij.zsh          # zellij functions and aliases
@@ -40,6 +40,9 @@ gc           # clean Homebrew, mole caches, and unused mise assets
 status       # show Brewfile drift and pending chezmoi changes
 lock         # dump brew state and track Brewfile and mise configs in chezmoi
 check        # run security checks
+
+# ssh
+ssh-load     # unlock Bitwarden and load SSH keys into ssh-agent
 
 # yazi
 y            # change directory after exit

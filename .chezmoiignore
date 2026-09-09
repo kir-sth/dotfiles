@@ -9,3 +9,5 @@ README.md
 
 .config/homebrew/trust.json
 .config/homebrew/trust.json.lock
+
+.ssh/known_hosts

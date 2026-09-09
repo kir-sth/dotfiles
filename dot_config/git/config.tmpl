@@ -1,7 +1,6 @@
 [user]
   name = {{ .name }}
   email = {{ .email }}
-  signingkey = {{ .signingkey }}
 
 [init]
   defaultBranch = main
@@ -61,10 +60,16 @@
   format = ssh
 
 [gpg "ssh"]
-  allowedSignersFile = {{ .allowedSignersFile }}
+  allowedSignersFile = ~/.ssh/allowed_signers
 
 [commit]
   gpgsign = true
 
 [tag]
   gpgsign = true
+
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+  path = ~/.config/git/config-github
+
+[includeIf "hasconfig:remote.*.url:ssh://ssh.sourcecraft.dev/**"]
+  path = ~/.config/git/config-sourcecraft

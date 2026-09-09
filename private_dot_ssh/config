@@ -1,0 +1,21 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_github.pub
+    IdentitiesOnly yes
+
+Host sourcecraft.dev
+    HostName sourcecraft.dev
+    User git
+    IdentityFile ~/.ssh/id_sourcecraft.pub
+    IdentitiesOnly yes
+
+Host *
+    AddKeysToAgent no
+    UseKeychain no
+    UserKnownHostsFile ~/.ssh/known_hosts
