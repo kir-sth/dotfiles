@@ -20,7 +20,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Runtimes         | mise, Bun, Python, Go, Rust, Swift                           |
 | Development      | lazygit, sqlit-tui, gh, just, task, ghgrab, glow, jnv        |
 | Infrastructure   | OpenTofu, OrbStack                                           |
-| AI               | code2prompt, Crush, Claude Desktop                           |
+| AI               | code2prompt, Crush                                           |
 | Apps             | Zen, Figma, IINA, Raycast, Telegram, Better Resource Monitor |
 
 ## Configuration
