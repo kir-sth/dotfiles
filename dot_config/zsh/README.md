@@ -15,7 +15,7 @@ Interactive shell config and the entry point for most of the CLI tooling in this
 ├── modules/
 │   ├── bumblebee.zsh       # supply-chain catalog sync + scan
 │   ├── cloudflare.zsh      # markdown extraction via Cloudflare API
-│   ├── ergonomics.zsh      # modern CLI replacements & shell UX
+│   ├── ergonomics.zsh      # modern CLI replacements and shell UX
 │   ├── secrets.zsh         # runtime credential injection wrappers + ssh-agent key loading
 │   ├── system.zsh          # system maintenance tasks
 │   ├── yazi.zsh            # yazi cd-on-exit wrapper
@@ -35,11 +35,13 @@ misefiles    # cat mise configs
 configs      # open chezmoi source in editor, then apply
 
 # system maintenance
-up           # update Homebrew packages, apps, and mise tools
-gc           # clean Homebrew, mole caches, and unused mise assets
-status       # show Brewfile drift and pending chezmoi changes
-lock         # dump brew state and track Brewfile and mise configs in chezmoi
-check        # run security checks
+system       # interactive CLI for all system maintenance tasks
+status       # diff local drift (Brewfile, chezmoi, git)
+check        # audit security vulnerabilities and outdated packages
+doctor       # run health diagnostics (brew, mise, mole)
+up           # upgrade Homebrew packages, apps, and mise tools
+lock         # snapshot current state to Brewfile and chezmoi
+gc           # clean caches, orphaned packages and builds
 
 # ssh
 ssh-load     # unlock Bitwarden and load SSH keys into ssh-agent

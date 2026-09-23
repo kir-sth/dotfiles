@@ -90,17 +90,19 @@ curl -fsSL https://raw.githubusercontent.com/kir-sth/dotfiles/main/install.sh | 
 ## Usage
 
 ```bash
-# configs shortcuts
+# config shortcuts
 brewfile     # cat Brewfile
 misefiles    # cat mise configs
 configs      # open chezmoi source in editor, then apply
 
-# system tasks
-up           # update Homebrew packages, apps, and mise tools
-gc           # clean Homebrew, mole caches, and unused mise assets
-status       # show Brewfile drift and pending chezmoi changes
-lock         # dump brew state, track Brewfile and mise configs in chezmoi
-check        # run security checks
+# system maintenance
+system       # interactive CLI for all system maintenance tasks
+status       # diff local drift (Brewfile, chezmoi, git)
+check        # audit security vulnerabilities and outdated packages
+doctor       # run health diagnostics (brew, mise, mole)
+up           # upgrade Homebrew packages, apps, and mise tools
+lock         # snapshot current state to Brewfile and chezmoi
+gc           # clean caches, orphaned packages and builds
 
 # ssh
 ssh-load     # unlock Bitwarden and load SSH keys into ssh-agent
