@@ -2,12 +2,14 @@ install.sh
 LICENSE
 README.md
 
+.config/gh/hosts.yml
+
+.config/homebrew/trust.json
+.config/homebrew/trust.json.lock
+
 .config/mole/*
 !.config/mole/whitelist
 
 .config/yazi/flavors
-
-.config/homebrew/trust.json
-.config/homebrew/trust.json.lock
 
 .ssh/known_hosts

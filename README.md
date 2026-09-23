@@ -46,6 +46,7 @@ switches automatically between remote hosts via git config.
 ├── bat           # bat theme
 ├── bottom        # system monitor
 ├── freeze        # code screenshot tool
+├── gh            # GitHub CLI settings
 ├── ghostty       # terminal emulator settings
 ├── git           # git ignore and configs
 ├── glow          # markdown reader
