@@ -48,10 +48,9 @@ system() {
         "git -C \"$XDG_DATA_HOME/chezmoi\" -c core.pager=\"delta --paging=never\" status -s"
       ;;
     (check)
-    # TODO: Pending fix schema_version v0.2.0
-    # "bumblebee::sync && bumblebee::scan" \
       system::run_tasks "Audit & Outdated Packages" \
         "brew vulns --deps" \
+        "bumblebee::sync && bumblebee::scan" \
         "brew outdated --greedy" \
         "mise outdated --bump --inactive"
       ;;
