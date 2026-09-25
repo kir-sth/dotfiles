@@ -42,7 +42,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
 cask "iina"
 cask "orbstack"
-cask "raycast"
 cask "zed"
 cask "zen"
 mas "Better Resource Monitor", id: 6758237306

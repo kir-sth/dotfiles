@@ -1,3 +1,10 @@
-# Yazi
+# machine-specific
+.config/gh/hosts.yml
+.config/homebrew/trust.json
+.config/homebrew/trust.json.lock
+
+# assets
 dot_config/yazi/flavors
+
+# secrets
 private_dot_ssh/known_hosts
