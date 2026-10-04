@@ -18,7 +18,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | CLI Extras       | dust, procs, bottom, tlrc, ffmpeg, ouch, delta, freeze, gum |
 | Editor / IDE     | Helix, Zed                                                  |
 | Runtimes         | mise, Bun, Python, Go, Rust, Swift                          |
-| Development      | lazygit, sqlit-tui, gh, just, task, ghgrab, glow, jnv       |
+| Development      | lazygit, sqlit-tui, gh, just, task, ghgrab, glow, jnv, ttl  |
 | Infrastructure   | OpenTofu, OrbStack                                          |
 | AI               | code2prompt, Crush                                          |
 | Apps             | Zen, Telegram, Better Resource Monitor, IINA, Figma         |
