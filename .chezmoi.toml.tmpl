@@ -2,12 +2,14 @@
 {{- $email := promptString "Your email" -}}
 {{- $sshGithubPubkey := promptString "GitHub SSH public key" -}}
 {{- $sshSourcecraftPubkey := promptString "SourceCraft SSH public key" -}}
+{{- $sshMarkovPubkey := promptString "Markov SSH public key" -}}
 
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}
   sshGithubPubkey = {{ $sshGithubPubkey | quote }}
   sshSourcecraftPubkey = {{ $sshSourcecraftPubkey | quote }}
+  sshMarkovPubkey = {{ $sshMarkovPubkey | quote }}
 
 [git]
   autoCommit = false

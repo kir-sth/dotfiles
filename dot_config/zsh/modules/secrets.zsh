@@ -31,6 +31,7 @@ ssh-load() {
   local keys=(
     ssh-github
     ssh-sourcecraft
+    ssh-markov
   )
 
   rbw unlocked &>/dev/null || rbw unlock || return 1

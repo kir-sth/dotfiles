@@ -15,6 +15,12 @@ Host sourcecraft.dev
     IdentityFile ~/.ssh/id_sourcecraft.pub
     IdentitiesOnly yes
 
+Host markov
+    HostName 192.168.0.42
+    User markov
+    IdentityFile ~/.ssh/id_markov.pub
+    IdentitiesOnly yes
+
 Host *
     AddKeysToAgent no
     UseKeychain no
