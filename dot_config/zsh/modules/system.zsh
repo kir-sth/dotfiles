@@ -44,6 +44,7 @@ system() {
     (status)
       system::run_tasks "Local Drift & Sync Status" \
         "brew bundle check --verbose" \
+        "true | brew bundle cleanup" \
         "chezmoi diff | delta --paging=never" \
         "git -C \"$XDG_DATA_HOME/chezmoi\" -c core.pager=\"delta --paging=never\" status -s"
       ;;
