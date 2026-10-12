@@ -18,6 +18,7 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 # XDG DATA
 export BUN_INSTALL="$XDG_DATA_HOME/bun"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export CODEX_HOME="$XDG_DATA_HOME/codex"
 export GOPATH="$XDG_DATA_HOME/go"
 export IPYTHONDIR="$XDG_DATA_HOME/ipython"
 export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
