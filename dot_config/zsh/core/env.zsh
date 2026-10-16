@@ -1,3 +1,6 @@
+# UNIQUE SEARCH PATHS
+typeset -gU PATH path FPATH fpath
+
 # XDG BASE
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

@@ -1,5 +1,3 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-typeset -U path PATH
-
 export SHELL_SESSIONS_DISABLE=1
