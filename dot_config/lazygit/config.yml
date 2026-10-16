@@ -2,77 +2,33 @@
 
 gui:
   nerdFontsVersion: "3"
-  showIcons: true
   showBranchCommitHash: true
   showDivergenceFromBaseBranch: arrowAndNumber
   sidePanelWidth: 0.25
   scrollHeight: 5
-  scrollPastBottom: true
   theme:
-    activeBorderColor:
-      - "#7aa2f7"
-      - bold
-    inactiveBorderColor:
-      - "#3b4261"
-    optionsTextColor:
-      - "#bb9af7"
-    selectedLineBgColor:
-      - "#2e3c64"
-    cherryPickedCommitBgColor:
-      - "#3b4261"
-    cherryPickedCommitFgColor:
-      - "#7dcfff"
-    unstagedChangesColor:
-      - "#f7768e"
-    defaultFgColor:
-      - "#c0caf5"
-    searchingActiveBorderColor:
-      - "#e0af68"
-      - bold
+    activeBorderColor: ["#7aa2f7", bold]
+    inactiveBorderColor: ["#3b4261"]
+    optionsTextColor: ["#bb9af7"]
+    selectedLineBgColor: ["#2e3c64"]
+    cherryPickedCommitBgColor: ["#3b4261"]
+    cherryPickedCommitFgColor: ["#7dcfff"]
+    unstagedChangesColor: ["#f7768e"]
+    defaultFgColor: ["#c0caf5"]
+    searchingActiveBorderColor: ["#e0af68", bold]
+
 git:
   overrideGpg: true
-  branchLogCmd: >
-    git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --
-
   diffRenderers:
-    - command: delta --paging=never
+    - name: delta
+      command: delta --paging=never
       colorArg: always
-    - command: delta --paging=never --side-by-side
+    - name: delta side-by-side
+      command: delta --paging=never --side-by-side
       colorArg: always
-  merging:
-    manualCommit: false
-update:
-  method: never
+
 os:
   editPreset: helix
-customCommands:
-  - key: "P"
-    context: "localBranches"
-    description: "Force push with lease"
-    command: >
-      git push --force-with-lease origin {{.SelectedLocalBranch.Name}}
 
-    loadingText: "Force pushing..."
-  - key: "R"
-    context: "commits"
-    description: "Interactive rebase from this commit"
-    prompts:
-      - type: "confirm"
-        title: "Interactive Rebase"
-        body: "Start rebase from selected commit?"
-    command: >
-      git rebase -i {{.SelectedCommit.Sha}}^
-
-    output: terminal
-    loadingText: "Rebasing..."
-  - key: "O"
-    context: "files"
-    description: "Open remote repository"
-    command: >
-      open $(git remote get-url origin)
-
-  - key: "D"
-    context: "localBranches"
-    description: "Delete merged branches"
-    command: >
-      git branch --merged main | grep -vE '(^\*|main|master)' | xargs -r git branch -d
+update:
+  method: never
