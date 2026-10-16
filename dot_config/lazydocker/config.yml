@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lazydocker.json
+
+gui:
+  sidePanelWidth: 0.25
+  scrollHeight: 5
+  containerStatusHealthStyle: icon
+  theme:
+    activeBorderColor: ["#7aa2f7", bold]
+    inactiveBorderColor: ["#3b4261"]
+    optionsTextColor: ["#bb9af7"]
+    selectedLineBgColor: ["#2e3c64"]
+
+logs:
+  tail: "1000"

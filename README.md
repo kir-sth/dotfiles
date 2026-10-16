@@ -10,18 +10,18 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 
 ## Stack
 
-| Category         | Tools                                                 |
-| ---------------- | ----------------------------------------------------- |
-| System           | chezmoi, mole, rbw, bumblebee                         |
-| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)  |
-| CLI Essentials   | yazi, zoxide, bat, eza, fd, ripgrep, jaq, moor        |
-| CLI Extras       | dust, procs, bottom, ffmpeg, ouch, delta, freeze, gum |
-| Editor / IDE     | Helix, Zed                                            |
-| Runtimes         | mise, Bun, Python, Go, Rust, Swift                    |
-| Development      | lazygit, sqlit-tui, gh, just, ghgrab, glow, jnv, ttl  |
-| Infrastructure   | OpenTofu, OrbStack                                    |
-| AI               | code2prompt, Crush, Codex                             |
-| Apps             | Zen, Telegram, Better Resource Monitor, IINA, Figma   |
+| Category         | Tools                                                            |
+| ---------------- | ---------------------------------------------------------------- |
+| System           | chezmoi, mole, rbw, bumblebee                                    |
+| Terminal & Shell | Ghostty, Zellij, zsh (sheldon, starship, fzf, atuin)             |
+| CLI Essentials   | yazi, zoxide, bat, eza, fd, ripgrep, jaq, moor                   |
+| CLI Extras       | dust, procs, bottom, ffmpeg, ouch, delta, freeze, gum            |
+| Editor / IDE     | Helix, Zed                                                       |
+| Runtimes         | mise, Bun, Python, Go, Rust, Swift                               |
+| Development      | lazygit, lazydocker, sqlit-tui, gh, just, ghgrab, glow, jnv, ttl |
+| Infrastructure   | OpenTofu, OrbStack                                               |
+| AI               | code2prompt, Crush, Codex                                        |
+| Apps             | Zen, Telegram, Better Resource Monitor, IINA, Figma              |
 
 ## Configuration
 
@@ -53,7 +53,8 @@ switches automatically between remote hosts via git config.
 ├── helix         # editor
 ├── homebrew      # brew bundle and env
 ├── jnv           # interactive json viewer
-├── lazygit       # terminal UI for git commands
+├── lazydocker    # TUI for docker
+├── lazygit       # TUI for git
 ├── mise          # dev tools manager
 ├── mole          # cleaner whitelist
 ├── sheldon       # plugin definitions
