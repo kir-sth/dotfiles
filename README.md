@@ -102,7 +102,7 @@ system       # interactive CLI for all system maintenance tasks
 status       # diff local drift (Brewfile, chezmoi, git)
 check        # audit security vulnerabilities and outdated packages
 doctor       # run health diagnostics (brew, mise, mole)
-up           # upgrade Homebrew packages, apps, and mise tools
+up           # upgrade Homebrew packages and casks, mas apps, and mise tools
 lock         # snapshot current state to Brewfile and chezmoi
 gc           # clean caches, orphaned packages and builds
 

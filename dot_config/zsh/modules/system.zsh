@@ -66,6 +66,7 @@ system() {
         "brew update" \
         "brew upgrade --greedy" \
         "brew bundle" \
+        "mas upgrade" \
         "mise upgrade"
       ;;
     (lock)
