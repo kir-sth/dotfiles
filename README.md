@@ -21,7 +21,7 @@ Personal macOS dotfiles designed for Apple Silicon and managed with [`chezmoi`](
 | Development      | lazygit, lazydocker, sqlit-tui, gh, just, ghgrab, glow, jnv, ttl |
 | Infrastructure   | OpenTofu, OrbStack                                               |
 | AI               | code2prompt, Crush, Codex                                        |
-| Apps             | Zen, Telegram, Better Resource Monitor, IINA, Figma              |
+| Apps             | Zen, Telegram, Better Resource Monitor, IINA, Figma, AmneziaVPN  |
 
 ## Configuration
 
